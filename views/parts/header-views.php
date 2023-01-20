@@ -41,7 +41,7 @@
 
                         <div class="header-top-right">
                             <ul class="list-unstyled d-flex color-secondary">
-                                <li class="pr-50"><a href="#">Mi Cuenta</a></li>
+                                <li class="pr-50"><a href="../login-register.php">Login/Register</a></li>
                                 <li class="pr-50"><a href="#">FAQs</a></li>
                                 <li><a href="#">Ayuda</a></li>
                             </ul>
