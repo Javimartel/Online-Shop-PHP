@@ -1,6 +1,6 @@
 <?php include "./views/parts/header.php";?>
 
-<section id="billboard">
+<!-- <section id="billboard">
 	<div class="main-slider">
 		
 		<div class="slider-item">
@@ -16,10 +16,10 @@
 				<div class="pix_btn">
 					<a href="#" class="btn-hvr-effects mt-3">Shop Now</a>
 				</div>
-			</div><!--content-box-->
+			</div>
 
 
-		</div><!--slider-item-->
+		</div>
 
 		<div class="slider-item">
 			
@@ -34,10 +34,10 @@
 				<div class="pix_btn">
 					<a href="#" class="btn-hvr-effects mt-3">Shop Now</a>
 				</div>
-			</div><!--content-box-->
+			</div>
 
 				
-		</div><!--slider-item-->
+		</div>
 
 		<div class="slider-item">
 			
@@ -52,14 +52,31 @@
 				<div class="pix_btn">
 					<a href="#" class="btn-hvr-effects mt-3">Shop Now</a>
 				</div>
-			</div><!--content-box-->
+			</div>
 
 					
-		</div><!--slider-item-->
+		</div>
 
-	</div><!--slider-->
+	</div>
 
-</section>
+</section> -->
+
+<div class="site-banner">
+	<div class="banner-content">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">			
+					<div class="colored">
+						<h1>Inicio</h1>
+						<div class="breadcum-items">
+							<span class="item"><a href="../index.html">Home</a></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
 <section class="about-us margin-medium">
 	<div class="container">
