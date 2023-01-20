@@ -1,3 +1,66 @@
+<?php 
+    if (isset($_POST['register'])) {
+        $resultado = [
+            'error' => false,
+            'mensaje' => 'El usuario ' . $_POST["register-nick"] . ' ya existe'
+        ];
+        $config = include "../config/config.php";
+        try {
+            $dsn = 'mysql:host='.$config['db']['host'].';dbname='.$config['db']['name'];
+            $conexion = new PDO($dsn, $config['db']['user'], $config['db']['pass'], $config['db']['options']);
+            $consultaSQL = "SELECT nick FROM usuarios";
+            $sentencia = $conexion->prepare($consultaSQL);
+            $sentencia->execute();
+            $usuarios = $sentencia->fetchAll();
+            
+            foreach ($usuarios as $nicks) {
+                if ($_POST["register-nick"] === $nicks[0]) {
+                    $resultado['error'] = true;
+                    goto end;
+                }
+            }
+
+            $usuario = [
+                "nick" => $_POST["register-nick"],
+                "password" => $_POST["register-password"],
+                "email" => $_POST["register-email"],
+                "phone" => $_POST["register-phone"]
+            ];
+            $consultaSQL = "INSERT INTO usuarios (nick, password, email, phone)";
+            $consultaSQL .= "VALUES (:" . implode(", :", array_keys($usuario)) . ")";
+            $sentencia = $conexion->prepare($consultaSQL);
+            $sentencia->execute($usuario);
+            
+?>
+<?php
+    if (isset($resultado) && $resultado["error"] === true) {
+        end:
+?>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="alert alert-danger" role="alert">
+                    <?= $resultado['mensaje'] ?>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php
+    } else {
+?>
+		<script type="text/javascript">
+			window.location.href = "../index.php";
+		</script>
+<?php
+	}
+        } catch (PDOException $error) {
+            $resultado['error'] = true;
+            $resultado['mensaje'] = $error->getMessage();
+            goto end;
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,13 +79,15 @@
 
 <body>
     <div class="d-flex justify-content-center align-center mt-5">
-        <img src="../images/img-template/main-logo.png" alt="logo">
+        <a href="../index.php">
+            <img src="../images/img-template/main-logo.png" alt="logo">
+        </a>
     </div>
     <div class="container login-container">
         <div class="row">
             <div class="col-md-6 login-form-1 d-flex flex-column justify-content-center">
                 <h3>Regístrate</h3>
-                <form action="../index.php" method="post">
+                <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                     <div class="form-group">
                         <input type="text" class="form-control" name="register-nick" placeholder="Usuario" value="" />
                     </div>
@@ -46,7 +111,7 @@
 
             <div class="col-md-6 login-form-2">
                 <h3>Acceso</h3>
-                <form action="../index.php" method="post">
+                <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                     <div class="form-group">
                         <input type="text" class="form-control" name="login-user" placeholder="Usuario" value="" />
                     </div>
