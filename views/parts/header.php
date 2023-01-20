@@ -112,4 +112,3 @@
 
 	</header>
 
-</div><!--header-wrap-->
