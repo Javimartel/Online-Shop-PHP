@@ -190,20 +190,20 @@
 			<div class="modal-body">
 				<form id="form-insertar" action="#" method="post">
 					<div class="form-group mb-2">
-						<label for="insert-name m-2">Inserta el nombre</label>
+						<label for="insert-name m-2">Inserta un nombre</label>
 						<input type="text" class="form-control" name="insert-name">
 					</div>
 					<div class="form-group mb-2">
-						<label for="insert-price">Inserta el precio</label>
+						<label for="insert-price">Inserta un precio</label>
 						<input type="number" class="form-control" name="insert-price">
 					</div>
 					<div class="form-group mb-2">
-						<label for="insert-description">Inserta la descripción</label>
+						<label for="insert-description">Inserta una descripción</label>
 						<input type="text" name="insert-description" class="form-control">
 					</div>
 					<div class="form-group mb-2">
-						<label for="insert-image">Adjunta la imagen</label>
-						<input style="background: #bfbfbf !important;" type="file" name="insert-image" class="form-control">
+						<label for="insert-image">Adjunta una imagen</label>
+						<input style="background: white !important; color: black; border: 1px solid rgb(207, 207, 207)" type="file" name="insert-image" class="form-control">
 					</div>
 					<div class="form-group">
 						<button type="submit" class="btn btn-primary" name="insert" data-bs-dismiss="modal">Insertar</button>
