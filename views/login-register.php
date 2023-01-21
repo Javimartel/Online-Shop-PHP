@@ -1,4 +1,5 @@
 <?php 
+    // Realizamos las funciones correspondientes al Registro
     if (isset($_POST['register'])) {
         $resultado = [
             'error' => false,
@@ -46,6 +47,8 @@
         </div>
     </div>
 <?php
+    // Muestra el error y vuelve al html
+    goto html;
     } else {
 ?>
 		<script type="text/javascript">
@@ -59,6 +62,53 @@
             goto end;
         }
     }
+?>
+
+<?php 
+    // Realizamos las funciones correspondientes al login
+    if (isset($_POST['login'])) {
+        $resultado = [
+            'error' => false,
+            'mensaje' => 'El usuario ' . $_POST["login-nick"] . ' no existe'
+        ];
+        $config = include "../config/config.php";
+        try {
+            $dsn = 'mysql:host='.$config['db']['host'].';dbname='.$config['db']['name'];
+            $conexion = new PDO($dsn, $config['db']['user'], $config['db']['pass'], $config['db']['options']);
+            $consultaSQL = "SELECT nick, password, admin FROM usuarios";
+            $sentencia = $conexion->prepare($consultaSQL);
+            $sentencia->execute();
+            $usuarios = $sentencia->fetchAll();
+            
+            foreach ($usuarios as $data) {
+                if ($_POST["login-nick"] === $data[0]) {
+                    if ($_POST["login-password"] === $data[1]) {
+                        // Guardar el nick y el admin en la session
+                    } else {
+                        $resultado['error'] = true;
+                        $resultado['mensaje'] = "La contraseña para " . $_POST["login-nick"] . " es incorrecta";
+                        goto end;
+                    }
+                ?>
+
+                    <script type="text/javascript">
+                        window.location.href = "../index.php";
+                    </script>
+                <?php
+                }
+            }
+
+            $resultado['error'] = true;
+            goto end;
+
+
+        } catch (PDOException $error) {
+            $resultado['error'] = true;
+            $resultado['mensaje'] = $error->getMessage();
+            goto end;
+        }
+    }
+    html:   
 ?>
 
 <!DOCTYPE html>
@@ -113,7 +163,7 @@
                 <h3>Acceso</h3>
                 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                     <div class="form-group">
-                        <input type="text" class="form-control" name="login-user" placeholder="Usuario" value="" />
+                        <input type="text" class="form-control" name="login-nick" placeholder="Usuario" value="" />
                     </div>
                     <div class="form-group">
                         <input type="password" class="form-control" name="login-password" placeholder="Contraseña" value="" />
