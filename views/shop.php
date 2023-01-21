@@ -84,7 +84,32 @@
 	<div class="container">
 		<div class="row">
 
-				<div class="product-item col-md-3 pb-4">
+			<?php
+				$config = include "../config/config.php";
+				try {
+					$dsn = 'mysql:host='.$config['db']['host'].';dbname='.$config['db']['name'];
+					$conexion = new PDO($dsn, $config['db']['user'], $config['db']['pass'], $config['db']['options']);
+					$consultaSQL = "SELECT name, price, description, image FROM productos";
+					$sentencia = $conexion->prepare($consultaSQL);
+					$sentencia->execute();
+					$productos = $sentencia->fetchAll();
+					
+					foreach ($productos as $data) {
+						echo "<div class='product-item col-md-3 pb-4'>
+								<a href='#' class='product-image'><img src='".$data[3]."'></a>
+								<div class='text-comtent text-center'>
+									<h5 class='pt-4'><a href='#'>".$data[0]."</a></h5>
+									<p>".$data[2]."</p>
+									<span class='price colored'>$".$data[1]."</span>
+								</div>
+							</div>";
+					}
+		
+		
+				} catch (PDOException $error) {}
+			?>
+
+				<!-- <div class="product-item col-md-3 pb-4">
 					<a href="./single-product.php" class="product-image"><img src="../images/img-template/cake-item1.jpg"></a>
 					<div class="text-comtent text-center">
 						<h5 class="pt-4"><a href="./single-product.php">Black Forest Pastry</a></h5>
@@ -179,7 +204,7 @@
 						<p>Cake - Pastries</p>
 						<span class="price colored">$12</span>
 					</div>
-				</div>
+				</div> -->
 
 		</div>
 	</div>
