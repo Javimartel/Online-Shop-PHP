@@ -38,6 +38,11 @@
             $consultaSQL .= "VALUES (:" . implode(", :", array_keys($usuario)) . ")";
             $sentencia = $conexion->prepare($consultaSQL);
             $sentencia->execute($usuario);
+            $_SESSION["user"]["nick"] = $usuario["nick"];
+            $_SESSION["user"]["password"] = $usuario["password"];
+            $_SESSION["user"]["email"] = $usuario["email"];
+            $_SESSION["user"]["phone"] = $usuario["phone"];
+            $_SESSION["user"]["admin"] = 0;
             
 ?>
 <?php
