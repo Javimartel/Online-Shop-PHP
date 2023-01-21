@@ -1,5 +1,27 @@
 <?php include "./parts/header-views.php";?>
 
+<?php
+	if (isset($_POST["insert"])) {
+		$config = include "../config/config.php";
+		try {
+			$dsn = 'mysql:host='.$config['db']['host'].';dbname='.$config['db']['name'];
+			$conexion = new PDO($dsn, $config['db']['user'], $config['db']['pass'], $config['db']['options']);
+			$producto = [
+				"name" => $_POST["insert-name"],
+				"price" => $_POST["insert-price"],
+				"description" => $_POST["insert-description"],
+				"image" => "../images/new-img/".$_POST["insert-image"]
+			];
+			echo $_POST["insert-image"];
+			$consultaSQL = "INSERT INTO productos (name, price, description, image)";
+			$consultaSQL .= "VALUES (:" . implode(", :", array_keys($producto)) . ")";
+			$sentencia = $conexion->prepare($consultaSQL);
+            $sentencia->execute($producto);
+	
+		} catch (PDOException $error) {}
+	}
+?>
+
 	<header id="header">
 		<div class="container">
 			<div class="row">
@@ -106,7 +128,7 @@
 					}
 					if (isset($_SESSION["user"]) && $_SESSION["user"]["admin"] === 1) {
 						echo '<div class="product-item col-md-3 pb-4">
-							<a href="#">
+							<a href="#" data-bs-toggle="modal" data-bs-target="#modal-insertar">
 							<div class="d-flex flex-column justify-content-center align-items-center" style="width:265px;height:303.8px;">
 							<svg class="d-flex align-center" xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
 								<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
@@ -156,6 +178,42 @@
 		</div>
 	</div>
 </section>
+
+<!-- Modal Insertar -->
+<div class="modal fade" id="modal-insertar" tabindex="-1" aria-labelledby="modal-insertar1" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="modal-insertar1">Insertar producto</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+			</div>
+			<div class="modal-body">
+				<form id="form-insertar" action="#" method="post">
+					<div class="form-group mb-2">
+						<label for="insert-name m-2">Inserta el nombre</label>
+						<input type="text" class="form-control" name="insert-name">
+					</div>
+					<div class="form-group mb-2">
+						<label for="insert-price">Inserta el precio</label>
+						<input type="number" class="form-control" name="insert-price">
+					</div>
+					<div class="form-group mb-2">
+						<label for="insert-description">Inserta la descripción</label>
+						<input type="text" name="insert-description" class="form-control">
+					</div>
+					<div class="form-group mb-2">
+						<label for="insert-image">Adjunta la imagen</label>
+						<input style="background: #bfbfbf !important;" type="file" name="insert-image" class="form-control">
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn btn-primary" name="insert" data-bs-dismiss="modal">Insertar</button>
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+					</div>
+					</form>
+			</div>
+		</div>
+	</div>
+</div>
 
 <footer id="footer">
 	<div class="container">
