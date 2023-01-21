@@ -1,3 +1,7 @@
+<?php 
+	session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -32,22 +36,35 @@
         <div class="header-top-menu bg-black color-secondary">
             <div class="container">
                 <div class="row">
-                    <div class="wrap flex-container padding-small">
-                        <div class="contact-block">
-                            <span class="pr-50"><i class="icon icon-phone"></i>123456789</span>
-                            <span class="color-secondary"><i class="icon icon-envelope-o"></i><a href="#">
-                                    javi@gmail.com</a></span>
-                        </div>
+                <div class="wrap flex-container padding-small">
+					<?php 
+						if (isset($_SESSION["user"])) {
+							echo "<div class='contact-block'>
+								<span class='pr-50'><i class='icon icon-phone'></i>".$_SESSION["user"]["phone"]."</span>
+								<span class='color-secondary'><i class='icon icon-envelope-o'></i><a href='#'>".$_SESSION["user"]["email"]."</a></span>
+							</div>";
+						} else {
+							echo "<div class='contact-block'>
+								<span class='pr-50'><i class='icon icon-phone'></i>Teléfono</span>
+								<span class='color-secondary'><i class='icon icon-envelope-o'></i><a href='#'>Email</a></span>
+							</div>";
+						}
+					?>
 
                         <div class="header-top-right">
                             <ul class="list-unstyled d-flex color-secondary">
-                                <li class="pr-50"><a href="./login-register.php">Login/Register</a></li>
-                                <li class="pr-50"><a href="#">FAQs</a></li>
-                                <li><a href="#">Ayuda</a></li>
-                            </ul>
-                        </div>
+                            <?php if (isset($_SESSION["user"])) {
+                                echo "<li class='pr-50'><a href='./views/../login-register.php?logout'>Desconectar</a></li>";
+                            } else {
+                                echo "<li class='pr-50'><a href='./views/../login-register.php'>Login/Register</a></li>";
+                            }
+                            ?>
+                            <li class="pr-50"><a href="#">FAQs</a></li>
+                            <li><a href="#">Ayuda</a></li>
+                        </ul>
+                    </div>
 
-                    </div><!--flex-container-->
+                </div><!--flex-container-->
 
                 </div>
             </div>
