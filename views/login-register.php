@@ -1,6 +1,11 @@
 <?php 
     // Inicializamos la session
     session_start();
+
+    if(isset($_GET["logout"])) {
+        session_destroy();
+    }
+
     // Realizamos las funciones correspondientes al Registro
     if (isset($_POST['register'])) {
         $resultado = [
@@ -44,7 +49,6 @@
             <div class="col-md-12">
                 <div class="alert alert-danger" role="alert">
                     <?= $resultado['mensaje'] ?>
-                    <?= print_r($_SESSION["user"]) ?>
                 </div>
             </div>
         </div>
