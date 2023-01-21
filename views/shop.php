@@ -70,7 +70,7 @@
 					<div class="colored">
 						<h1>Shop</h1>
 						<div class="breadcum-items">
-							<span class="item"><a href="../index.html">Home /</a></span>
+							<span class="item"><a href="../index.php">Home /</a></span>
 							<span class="item colored">Shop</span>
 						</div>
 					</div>
@@ -96,7 +96,7 @@
 					
 					foreach ($productos as $data) {
 						echo "<div class='product-item col-md-3 pb-4'>
-								<a href='#' class='product-image'><img src='".$data[3]."'></a>
+								<a href='#' class='product-image'><img style='width:265px;height:303.8px;object-fit:cover;' src='".$data[3]."'></a>
 								<div class='text-comtent text-center'>
 									<h5 class='pt-4'><a href='#'>".$data[0]."</a></h5>
 									<p>".$data[2]."</p>
@@ -140,71 +140,8 @@
 						<p>Cake - Pastries</p>
 						<span class="price colored">$12</span>
 					</div>
-				</div>
-				<div class="product-item col-md-3 pb-4">
-					<a href="./single-product.php" class="product-image"><img src="../images/img-template/cake-item1.jpg"></a>
-				    <div class="text-comtent text-center">
-						<h5 class="pt-4"><a href="./single-product.php">Macarons with Berries</a></h5>
-						<p>Cake - Pastries</p>
-						<span class="price colored">$12</span>
-					</div>
-				</div>
-				<div class="product-item col-md-3 pb-4">
-					<a href="./single-product.php" class="product-image"><img src="../images/img-template/cake-item1.jpg"></a>
-					<div class="text-comtent text-center">
-						<h5 class="pt-4"><a href="./single-product.php">Black Forest Pastry</a></h5>
-						<p>Cake - Pastries</p>
-						<span class="price colored">$12</span>
-					</div>
-				</div>
-				<div class="product-item col-md-3 pb-4">
-					<a href="./single-product.php" class="product-image"><img src="../images/img-template/cake-item2.jpg"></a>
-					<div class="text-comtent text-center">
-						<h5 class="pt-4"><a href="./single-product.php">Sprinkled Donuts</a></h5>
-						<p>Cake - Pastries</p>
-						<span class="price colored">$12</span>
-					</div>
-				</div>
-				<div class="product-item col-md-3 pb-4">
-					<a href="./single-product.php" class="product-image"><img src="../images/img-template/cake-item3.jpg"></a>
-					<div class="text-comtent text-center">
-						<h5 class="pt-4"><a href="./single-product.php">Black Forest Cupcake</a></h5>
-						<p>Cake - Pastries</p>
-						<span class="price colored">$12</span>
-					</div>
-				</div>
-				<div class="product-item col-md-3 pb-4">
-					<a href="./single-product.php" class="product-image"><img src="../images/img-template/cake-item4.jpg"></a>
-				    <div class="text-comtent text-center">
-						<h5 class="pt-4"><a href="./single-product.php">Macarons with Berries</a></h5>
-						<p>Cake - Pastries</p>
-						<span class="price colored">$12</span>
-					</div>
-				</div>
-				<div class="product-item col-md-3 pb-4">
-					<a href="./single-product.php" class="product-image"><img src="../images/img-template/cake-item1.jpg"></a>
-				    <div class="text-comtent text-center">
-						<h5 class="pt-4"><a href="./single-product.php">Macarons with Berries</a></h5>
-						<p>Cake - Pastries</p>
-						<span class="price colored">$12</span>
-					</div>
-				</div>
-				<div class="product-item col-md-3 pb-4">
-					<a href="./single-product.php" class="product-image"><img src="../images/img-template/cake-item4.jpg"></a>
-				    <div class="text-comtent text-center">
-						<h5 class="pt-4"><a href="./single-product.php">Macarons with Berries</a></h5>
-						<p>Cake - Pastries</p>
-						<span class="price colored">$12</span>
-					</div>
-				</div>
-				<div class="product-item col-md-3 pb-4">
-					<a href="./single-product.php" class="product-image"><img src="../images/img-template/cake-item1.jpg"></a>
-				    <div class="text-comtent text-center">
-						<h5 class="pt-4"><a href="./single-product.php">Macarons with Berries</a></h5>
-						<p>Cake - Pastries</p>
-						<span class="price colored">$12</span>
-					</div>
-				</div> -->
+				</div -->
+				
 
 		</div>
 	</div>
