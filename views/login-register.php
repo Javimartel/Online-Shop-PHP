@@ -1,4 +1,6 @@
 <?php 
+    // Inicializamos la session
+    session_start();
     // Realizamos las funciones correspondientes al Registro
     if (isset($_POST['register'])) {
         $resultado = [
@@ -42,6 +44,7 @@
             <div class="col-md-12">
                 <div class="alert alert-danger" role="alert">
                     <?= $resultado['mensaje'] ?>
+                    <?= print_r($_SESSION["user"]) ?>
                 </div>
             </div>
         </div>
@@ -75,7 +78,7 @@
         try {
             $dsn = 'mysql:host='.$config['db']['host'].';dbname='.$config['db']['name'];
             $conexion = new PDO($dsn, $config['db']['user'], $config['db']['pass'], $config['db']['options']);
-            $consultaSQL = "SELECT nick, password, admin FROM usuarios";
+            $consultaSQL = "SELECT nick, password, email, phone, admin FROM usuarios";
             $sentencia = $conexion->prepare($consultaSQL);
             $sentencia->execute();
             $usuarios = $sentencia->fetchAll();
@@ -83,7 +86,11 @@
             foreach ($usuarios as $data) {
                 if ($_POST["login-nick"] === $data[0]) {
                     if ($_POST["login-password"] === $data[1]) {
-                        // Guardar el nick y el admin en la session
+                        $_SESSION["user"]["nick"] = $_POST["login-nick"];
+                        $_SESSION["user"]["password"] = $_POST["login-password"];
+                        $_SESSION["user"]["email"] = $data[2];
+                        $_SESSION["user"]["phone"] = $data[3];
+                        $_SESSION["user"]["admin"] = $data[4];
                     } else {
                         $resultado['error'] = true;
                         $resultado['mensaje'] = "La contraseña para " . $_POST["login-nick"] . " es incorrecta";
