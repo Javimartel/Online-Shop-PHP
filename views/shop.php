@@ -12,7 +12,6 @@
 				"description" => $_POST["insert-description"],
 				"image" => "../images/new-img/".$_POST["insert-image"]
 			];
-			echo $_POST["insert-image"];
 			$consultaSQL = "INSERT INTO productos (name, price, description, image)";
 			$consultaSQL .= "VALUES (:" . implode(", :", array_keys($producto)) . ")";
 			$sentencia = $conexion->prepare($consultaSQL);
