@@ -52,6 +52,10 @@
 						<a href="#">
 							<i class="icon icon-shopping-cart"></i>
 						</a>
+						<?php if (isset($_SESSION["user"])) {
+							echo '<sub class="carrito">'.$elementos_carrito[0].'</sub>';
+						}
+						?>
 					</div>
 				</div><!--action-menu-->
 
