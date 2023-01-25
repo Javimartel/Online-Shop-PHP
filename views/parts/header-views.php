@@ -62,13 +62,13 @@
 					<?php 
 						if (isset($_SESSION["user"])) {
 							echo "<div class='contact-block'>
-								<span class='pr-50'><i class='icon icon-phone'></i>".$_SESSION["user"]["phone"]."</span>
-								<span class='color-secondary'><i class='icon icon-envelope-o'></i><a href='#'>".$_SESSION["user"]["email"]."</a></span>
+								<span class='pr-50'><i class='fa-solid fa-user'></i> ".$_SESSION["user"]["nick"]."</span>
+								<span class='color-secondary'><i class='icon icon-envelope-o'></i><a href='#'> ".$_SESSION["user"]["email"]."</a></span>
 							</div>";
 						} else {
 							echo "<div class='contact-block'>
-								<span class='pr-50'><i class='icon icon-phone'></i>Teléfono</span>
-								<span class='color-secondary'><i class='icon icon-envelope-o'></i><a href='#'>Email</a></span>
+								<span class='pr-50'><i class='fa-solid fa-user'></i> Usuario</span>
+								<span class='color-secondary'><i class='icon icon-envelope-o'></i><a href='#'> Email</a></span>
 							</div>";
 						}
 					?>
