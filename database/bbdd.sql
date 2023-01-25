@@ -1,10 +1,13 @@
+-- Eliminamos si existe la base de datos tienda
+DROP DATABASE IF EXISTS tienda;
+
 -- Creamos y utilizamos la base de datos tienda
 CREATE DATABASE IF NOT EXISTS tienda;
 USE tienda;
 
 -- Empezamos a crear las tablas
 CREATE TABLE IF NOT EXISTS usuarios (
-    id_user INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    id_user INT(11) AUTO_INCREMENT PRIMARY KEY,
     nick VARCHAR(30) NOT NULL,
     password VARCHAR(30) NOT NULL,
     email VARCHAR(50) NOT NULL,
@@ -13,7 +16,7 @@ CREATE TABLE IF NOT EXISTS usuarios (
 );
 
 CREATE TABLE IF NOT EXISTS productos (
-    id_product INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    id_product INT(11)  AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(30) NOT NULL,
     price DEC(5, 2) NOT NULL,   -- Ejemplo: 999,99
     description VARCHAR(255) NOT NULL,
@@ -21,13 +24,13 @@ CREATE TABLE IF NOT EXISTS productos (
 );
 
 CREATE TABLE IF NOT EXISTS carrito (
-    id_carrito INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    id_carrito INT(11) AUTO_INCREMENT PRIMARY KEY,
     id_user INT(11) NOT NULL,
     id_product INT(11) NOT NULL,
-    purchase_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    purchase_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (id_user) REFERENCES usuarios (id_user) ON DELETE CASCADE,
+    FOREIGN KEY (id_product) REFERENCES productos (id_product) ON DELETE CASCADE
 );
-
--- DROP DATABASE IF EXISTS tienda;
 
 -- Insertamos un admin
 INSERT INTO usuarios (nick, password, email, phone, admin) VALUES (
