@@ -27,11 +27,8 @@
 						<li class="nav-item dropdown">
 							<a href="#" data-bs-toggle="dropdown" aria-expanded="false" class="nav-link dropdown-toggle">Páginas</a>
 							<ul class="dropdown-menu">
-								<li><a href="./about.php" class="dropdown-item">Sobre nosotros</a></li>
 								<li><a href="./blog.php" class="dropdown-item">Blog</a></li>
 								<li><a href="./single-post.php" class="dropdown-item">Post simple</a></li>
-								<li><a href="./contact.php" class="dropdown-item">Contáctanos</a></li>
-								<li><a href="./shop.php" class="dropdown-item">Tienda</a></li>
 								<li><a href="./single-product.php" class="dropdown-item">Producto simple</a></li>
 							</ul>
 						</li>

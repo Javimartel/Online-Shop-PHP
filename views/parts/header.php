@@ -117,11 +117,8 @@
 						<li class="nav-item dropdown">
 							<a href="#" data-bs-toggle="dropdown" aria-expanded="false" class="nav-link dropdown-toggle">Páginas</a>
 							<ul class="dropdown-menu">
-								<li><a href="./views/about.php" class="dropdown-item">Sobre nosotros</a></li>
 								<li><a href="./views/blog.php" class="dropdown-item">Blog</a></li>
 								<li><a href="./views/single-post.php" class="dropdown-item">Post simple</a></li>
-								<li><a href="./views/contact.php" class="dropdown-item">Contáctanos</a></li>
-								<li><a href="./views/shop.php" class="dropdown-item">Tienda</a></li>
 								<li><a href="./views/single-product.php" class="dropdown-item">Producto simple</a></li>
 							</ul>
 						</li>
