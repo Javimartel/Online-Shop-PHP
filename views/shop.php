@@ -110,20 +110,43 @@
 				try {
 					$dsn = 'mysql:host='.$config['db']['host'].';dbname='.$config['db']['name'];
 					$conexion = new PDO($dsn, $config['db']['user'], $config['db']['pass'], $config['db']['options']);
-					$consultaSQL = "SELECT name, price, description, image FROM productos";
+					$consultaSQL = "SELECT id_product, name, price, description, image FROM productos";
 					$sentencia = $conexion->prepare($consultaSQL);
 					$sentencia->execute();
 					$productos = $sentencia->fetchAll();
 					
 					foreach ($productos as $data) {
 						echo "<div class='product-item col-md-3 pb-4'>
-								<a href='#' class='product-image'><img style='width:265px;height:303.8px;object-fit:cover;' src='".$data[3]."'></a>
+								<a href='#' data-bs-toggle='modal' data-bs-target='#modal-insertar-".$data[0]."' class='product-image'><img style='width:265px;height:303.8px;object-fit:cover;' src='".$data[4]."'></a>
 								<div class='text-comtent text-center'>
-									<h5 class='pt-4'><a href='#'>".$data[0]."</a></h5>
-									<p>".$data[2]."</p>
-									<span class='price colored'>$".$data[1]."</span>
+									<h5 class='pt-4'><a href='#'>".$data[1]."</a></h5>
+									<p>".$data[3]."</p>
+									<span class='price colored'>$".$data[2]."</span>
 								</div>
 							</div>";
+					// echo '<div class="modal fade" id="modal-producto-".$data[0]."" tabindex="-1" aria-labelledby="modal-producto-".$data[0]."" aria-hidden="true">
+					// 		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+					// 			<div class="modal-content">
+					// 				<div class="modal-header">
+					// 					<h5 class="modal-title" id="modal-producto-".$data[0]."">".$data[0]."</h5>
+					// 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+					// 				</div>
+					// 				<div class="modal-body">
+					// 					<form id="form-producto-".$data[0]." action="#" method="post">
+					// 						<div class="form-group mb-2 d-flex justify-content-center">
+					// 							<p>".$data[2]."</p>
+					// 							<span class="price colored">$".$data[1]."</span>
+					// 						</div>
+					// 						<div class="form-group">
+					// 							<button type="submit" class="btn btn-primary" name="insert" data-bs-dismiss="modal">Insertar</button>
+					// 							<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+					// 						</div>
+					// 					</form>
+					// 				</div>
+					// 			</div>
+					// 		</div>
+					// 	</div>';
+
 					}
 					if (isset($_SESSION["user"]) && $_SESSION["user"]["admin"] === 1) {
 						echo '<div class="product-item col-md-3 pb-4">
