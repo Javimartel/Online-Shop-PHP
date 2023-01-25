@@ -6,7 +6,6 @@
 
 			<div class="col-md-3 footer-logo text-center mb-3">
 				<img src="./images/img-template/main-logo.png" class="mb-3">
-				<p>Cambiar logo y cambiar este texto</p>
 			</div>		
 
 			<div class="col-md-5 mr-5 mb-3">
