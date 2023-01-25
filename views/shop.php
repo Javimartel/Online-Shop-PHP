@@ -19,6 +19,27 @@
 	
 		} catch (PDOException $error) {}
 	}
+	if (isset($_POST["add-product"]) && isset($_SESSION["user"])) {
+		$config = include "../config/config.php";
+		try {
+			$dsn = 'mysql:host='.$config['db']['host'].';dbname='.$config['db']['name'];
+			$conexion = new PDO($dsn, $config['db']['user'], $config['db']['pass'], $config['db']['options']);
+
+			// Coger el ID del usuario que está conectado
+			$consultaSQL = 'SELECT id_user FROM usuarios WHERE nick = "'.$_SESSION["user"]["nick"].'"';
+			$sentencia = $conexion->prepare($consultaSQL);
+            $sentencia->execute();
+			$id_user = $sentencia->fetchAll();
+
+			// Añadir producto al carrito con el id del usuario
+			$consultaSQL = "INSERT INTO carrito (id_user, id_product)";
+			$consultaSQL .= "VALUES (" . $id_user[0][0] .", ". $_POST["id-product"] . ")";
+			$sentencia = $conexion->prepare($consultaSQL);
+            $sentencia->execute();
+			print_r($sentencia);
+			
+		} catch (PDOException $error) {}
+	}
 ?>
 
 	<header id="header">
@@ -142,11 +163,12 @@
 						echo '<h3>'.$data[1].'</h3>
 												<p>'.$data[3].'</p>
 												<span class="price colored">$'.$data[2].'</span>
+												<input type="hidden" name="id-product" value="'.$data[0].'">
 											</div>';
 						if (isset($_SESSION["user"])) {
 							echo '<div class="form-group d-flex justify-content-center"><button type="submit" class="btn btn-primary m-2" name="add-product" data-bs-dismiss="modal">Añadir al carrito</button>';
 						} else {
-							echo '<div class="form-group d-flex justify-content-center"><button type="submit" class="btn btn-primary m-2" name="add-product" data-bs-dismiss="modal" disabled>Añadir al carrito</button>';
+							echo '<div class="form-group d-flex justify-content-center"><button type="submit" class="btn btn-primary m-2" data-bs-dismiss="modal" disabled>Añadir al carrito</button>';
 						}
 						echo '<button type="button" class="btn btn-secondary m-2" data-bs-dismiss="modal">Cancelar</button>
 											</div>
