@@ -201,7 +201,8 @@
 							</div>
 						</div>';
 					}
-					if (isset($_SESSION["user"]) && $_SESSION["user"]["admin"] === 1) {
+					
+					if (isset($_SESSION["user"]) && $_SESSION["user"]["admin"]) {
 						echo '<div class="product-item col-md-3 pb-4">
 							<a href="#" data-bs-toggle="modal" data-bs-target="#modal-insertar">
 							<div class="d-flex flex-column justify-content-center align-items-center" style="width:265px;height:303.8px;">
