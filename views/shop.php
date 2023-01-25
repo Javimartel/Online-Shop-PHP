@@ -36,8 +36,7 @@
 			$consultaSQL .= "VALUES (" . $id_user[0][0] .", ". $_POST["id-product"] . ")";
 			$sentencia = $conexion->prepare($consultaSQL);
             $sentencia->execute();
-			print_r($sentencia);
-			
+
 		} catch (PDOException $error) {}
 	}
 ?>
