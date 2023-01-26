@@ -1,22 +1,5 @@
 <?php 
 	session_start();
-
-    if(isset($_SESSION["user"])) {
-        $index = false;
-        // Eliminamos producto del carrito
-		include "./../controllers/removeCart.php";
-        // Añadimos producto al carrito si existe el POST
-        if (isset($_POST["add-product"])) {
-            include "./../controllers/addCart.php";
-        }
-        // Obtenemos el numero de elementos del Carrito
-		include "./../controllers/numberCart.php";
-        // Obtenemos todos los productos del carrito
-        include "./../controllers/productsCart.php";
-        // Añadimos el offcanvas para tener el carrito en todas las páginas
-        include "./../controllers/offcanvas.php";
-	}
-
 ?>
 
 <!DOCTYPE html>
@@ -46,6 +29,24 @@
     <link rel="stylesheet" type="text/css" href="../css/style.css">
 
 </head>
+
+<?php 
+    if(isset($_SESSION["user"])) {
+        $index = false;
+        // Eliminamos producto del carrito
+        include "./../controllers/removeCart.php";
+        // Añadimos producto al carrito si existe el POST
+        if (isset($_POST["add-product"])) {
+            include "./../controllers/addCart.php";
+        }
+        // Obtenemos el numero de elementos del Carrito
+        include "./../controllers/numberCart.php";
+        // Obtenemos todos los productos del carrito
+        include "./../controllers/productsCart.php";
+        // Añadimos el offcanvas para tener el carrito en todas las páginas
+        include "./../controllers/offcanvas.php";
+    }
+?>
 
 <body>
 

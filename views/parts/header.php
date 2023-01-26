@@ -1,17 +1,5 @@
 <?php 
 	session_start();
-
-	if(isset($_SESSION["user"])) {
-		$index = true;
-		include "./controllers/removeCart.php";
-        // Obtenemos el numero de elementos del Carrito
-		include "./controllers/numberCart.php";
-        // Obtenemos todos los productos del carrito
-        include "./controllers/productsCart.php";
-        // Añadimos el offcanvas para tener el carrito en todas las páginas
-        include "./controllers/offcanvas.php";
-	}
-
 ?>
 
 <!DOCTYPE html>
@@ -41,6 +29,20 @@
 
 	</head>
 <body>
+
+<?php 
+	if(isset($_SESSION["user"])) {
+		$index = true;
+		// Eliminamos producto del carrito
+		include "./controllers/removeCart.php";
+        // Obtenemos el numero de elementos del Carrito
+		include "./controllers/numberCart.php";
+        // Obtenemos todos los productos del carrito
+        include "./controllers/productsCart.php";
+        // Añadimos el offcanvas para tener el carrito en todas las páginas
+        include "./controllers/offcanvas.php";
+	}
+?>
 
 <div id="main-wrapper" class="overflow-hidden">
 	<div class="header-top-menu bg-black color-secondary">
