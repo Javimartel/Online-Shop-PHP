@@ -8,7 +8,7 @@
 
 				<div class="navbar-brand">
 					<a href="../index.php">
-						<img src="../images/img-template/main-logo.png" alt="logo">
+						<img src="../../images/img-template/img-template/main-logo.png" alt="logo">
 					</a>
 				</div>
 
@@ -86,7 +86,7 @@
 		<div class="row">
 
 			<div class="col-md-6">
-				<a href="#" class="product-image"><img src="images/tabimg.jpg"></a>
+				<a href="#" class="product-image"><img src="../images/img-template/tabimg.jpg"></a>
 			</div>
 
 			<div class="col-md-6 pl-5">

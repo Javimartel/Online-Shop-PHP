@@ -8,7 +8,7 @@
 
 				<div class="navbar-brand">
 					<a href="../index.php">
-						<img src="../images/img-template/main-logo.png" alt="logo">
+						<img src="../../images/img-template/img-template/main-logo.png" alt="logo">
 					</a>
 				</div>
 
@@ -92,7 +92,7 @@
 		<main class="main-content col-md-9">
 			<div class="post-detail mb-5">
 					<a href="#">
-						<img src="images/blog-post.jpg" alt="blog" class="mb-3">
+						<img src="../images/img-template/blog-post.jpg" alt="blog" class="mb-3">
 					</a>
 					<div class="post-content text-hover">
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eisusmod tempor incidunt ut elit et.Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eisusmod tempor incidunt ut elit et.</p>
@@ -108,7 +108,7 @@
 			<div class="comment-list mt-4">
 
 				<article class="flex-container d-flex mb-3">
-					<img src="images/default.png" alt="default" class="commentorImg">
+					<img src="../images/img-template/default.png" alt="default" class="commentorImg">
 					<div class="author-post">
 						<div class="comment-meta d-flex">
 							<h4>Michael Watson</h4>
@@ -123,7 +123,7 @@
 
 			<div class="child-comments">
 				<article class="flex-container d-flex">
-					<img src="images/default.png" alt="sara" class="commentorImg">
+					<img src="../images/img-template/default.png" alt="sara" class="commentorImg">
 					<div class="author-post">
 						<div class="comment-meta d-flex">
 							<h4>Chris Gyale</h4>
@@ -165,7 +165,7 @@
 				<div class="row">
 
 				<div class="meta-person bg-alabaster p-4 text-center">
-					<img src="images/ceo.jpg" alt="person" class="personImg">
+					<img src="../images/img-template/ceo.jpg" alt="person" class="personImg">
 					<h3 class="colored mt-3">Head Chef</h3>
 					<p>He is a Experience, Amazing and Best Chef in our Restaurant.</p>
 				</div>
@@ -193,7 +193,7 @@
 				<h3>Recent Posts</h3>
 				<div class="d-flex mb-3 mt-3">
 					<div class="post-image">
-						<img src="images/cake-item1.jpg" class="rpImg">
+						<img src="../images/img-template/cake-item1.jpg" class="rpImg">
 					</div>
 					<div class="text-block">
 					<a href="#">2 Storey Cake Tricks And Tips</a>
@@ -206,7 +206,7 @@
 
 				<div class="d-flex mb-3">
 					<div class="post-image">
-						<img src="images/cake-item1.jpg" class="rpImg">
+						<img src="../images/img-template/cake-item1.jpg" class="rpImg">
 					</div>
 					<div class="text-block">
 					<a href="#">Special Chocolate Rolls</a>
@@ -219,7 +219,7 @@
 
 				<div class="d-flex mb-3">
 					<div class="post-image">
-						<img src="images/cake-item1.jpg" class="rpImg">
+						<img src="../images/img-template/cake-item1.jpg" class="rpImg">
 					</div>
 					<div class="text-block">
 					<a href="#">Fullfill the Cupcakes Standard</a>
