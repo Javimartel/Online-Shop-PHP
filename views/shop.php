@@ -2,10 +2,19 @@
 
 <?php
 	if (isset($_POST["insert"])) {
-		// Admin inserta producto nuevo
+		// Admin inserta un producto nuevo
 		include "../controllers/insertProduct.php";
 	}
 
+	if (isset($_POST["delete-product"])) {
+		// Admin elimina un producto
+		include "../controllers/deleteProduct.php";
+	}
+
+	if (isset($_POST["update-product"])) {
+		// Admin actualiza un producto
+		include "../controllers/updateProduct.php";
+	}
 ?>
 
 	<header id="header">
@@ -114,36 +123,70 @@
 							</div>";
 						echo '<div class="modal fade" id="modal-producto-'.$data[0].'" tabindex="-1" aria-labelledby="modal-producto-'.$data[0].'1" aria-hidden="true">
 								<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-									<div class="modal-content">
-										<div class="modal-header">
-											<h5 class="modal-title" id="modal-producto-'.$data[0].'1">Añadir producto</h5>
-											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
-										</div>
-										<div class="modal-body">
-											<form id="form-producto-'.$data[0].'" action="#" method="post">
-												<div class="form-group mb-2 d-flex flex-column align-items-center">';
-						if (!isset($_SESSION["user"])) {
-							echo '<div class="alert alert-danger" role="alert" style="text-align-last: center">
-								Tienes que <a href="./login-register.php" class="alert-link"><u>INICIAR SESIÓN</u></a> para poder añadir productos al carrito
-							</div>';
-						}
-						echo '<h3>'.$data[1].'</h3>
-												<p>'.$data[3].'</p>
-												<span class="price colored">$'.$data[2].'</span>
-												<input type="hidden" name="id-product" value="'.$data[0].'">
-											</div>';
-						if (isset($_SESSION["user"])) {
-							echo '<div class="form-group d-flex justify-content-center"><button type="submit" class="btn btn-primary m-2" name="add-product" data-bs-dismiss="modal">Añadir al carrito</button>';
+									<div class="modal-content">';
+
+						if (isset($_SESSION["user"]) && $_SESSION["user"]["admin"]) {
+
+							echo '<div class="modal-header">
+								<h5 class="modal-title" id="modal-producto-'.$data[0].'1">Actualizar producto</h5>
+								<button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close" style="background-color: black !important">X</button>
+							</div>
+							<div class="modal-body">
+							<form id="form-producto-'.$data[0].'" action="#" method="post">
+							<div class="form-group mb-2">
+							  <label for="update-name m-2">Nombre del producto</label>
+							  <input type="text" class="form-control" name="update-name" value="'.$data[1].'">
+							</div>
+							<div class="form-group mb-2">
+								<label for="update-price">Precio del producto</label>
+								<input type="number" class="form-control" name="update-price" value="'.$data[2].'">
+							</div>
+							<div class="form-group mb-2">
+								<label for="update-description">Descripción del producto</label>
+								<input type="text" name="update-description" class="form-control" value="'.$data[3].'">
+							</div>
+							<div class="form-group mb-2">
+								<label for="update-image">Imagen del producto</label>
+								<input style="background: white !important; color: black; border: 1px solid rgb(207, 207, 207)" type="file" accept="image/png, image/jpeg, image/jpg" name="update-image" class="form-control">
+							</div>
+							<input type="hidden" name="id-product" value="'.$data[0].'">
+							<input type="hidden" name="img-product" value="'.$data[4].'">
+						  	<div class="form-group d-flex justify-content-center">
+								<button type="submit" class="btn btn-success m-2" name="update-product" data-bs-dismiss="modal">Actualizar</button>
+								<button type="submit" class="btn btn-danger m-2" name="delete-product" data-bs-dismiss="modal">Eliminar</button>';
+
 						} else {
-							echo '<div class="form-group d-flex justify-content-center"><button type="submit" class="btn btn-primary m-2" data-bs-dismiss="modal" disabled>Añadir al carrito</button>';
+
+							echo '<div class="modal-header">
+								<h5 class="modal-title" id="modal-producto-'.$data[0].'1">Añadir producto</h5>
+								<button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close" style="background-color: black !important">X</button>
+							</div>
+							<div class="modal-body">
+							<form id="form-producto-'.$data[0].'" action="#" method="post">
+							<div class="form-group mb-2 d-flex flex-column align-items-center">';
+							if (!isset($_SESSION["user"])) {
+								echo '<div class="alert alert-danger" role="alert" style="text-align-last: center">
+									Tienes que <a href="./login-register.php" class="alert-link"><u>INICIAR SESIÓN</u></a> para poder añadir productos al carrito
+								</div>';
+							}
+							echo '<h3>'.$data[1].'</h3>
+													<p>'.$data[3].'</p>
+													<span class="price colored">$'.$data[2].'</span>
+													<input type="hidden" name="id-product" value="'.$data[0].'">
+												</div>';
+							if (isset($_SESSION["user"])) {
+								echo '<div class="form-group d-flex justify-content-center"><button type="submit" class="btn btn-primary m-2" name="add-product" data-bs-dismiss="modal">Añadir al carrito</button>';
+							} else {
+								echo '<div class="form-group d-flex justify-content-center"><button type="submit" class="btn btn-primary m-2" data-bs-dismiss="modal" disabled>Añadir al carrito</button>';
+							}
 						}
 						echo '<button type="button" class="btn btn-secondary m-2" data-bs-dismiss="modal">Cancelar</button>
-											</div>
-										</form>
+												</div>
+											</form>
+										</div>
 									</div>
 								</div>
-							</div>
-						</div>';
+							</div>';
 					}
 					
 					if (isset($_SESSION["user"]) && $_SESSION["user"]["admin"]) {
@@ -186,13 +229,12 @@
 													<button type="submit" class="btn btn-primary" name="insert" data-bs-dismiss="modal">Insertar</button>
 													<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
 												</div>
-												</form>
+											</form>
 										</div>
 									</div>
 								</div>
 							</div>';
 					}
-		
 		
 				} catch (PDOException $error) {}
 			?>
