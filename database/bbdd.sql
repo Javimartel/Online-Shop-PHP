@@ -62,3 +62,10 @@ FROM usuarios INNER JOIN carrito
 ON usuarios.id_user = carrito.id_user
 INNER JOIN productos
 ON productos.id_product = carrito.id_product;
+
+-- Consulta para obtener los productos del carrito de un usuario
+SELECT productos.id_product, productos.name, productos.price, productos.description, productos.image 
+FROM productos INNER JOIN carrito
+ON productos.id_product = carrito.id_product
+INNER JOIN usuarios
+ON usuarios.id_user = carrito.id_user WHERE carrito.id_user = 2;
