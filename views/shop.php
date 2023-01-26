@@ -162,7 +162,7 @@
 									<div class="modal-content">
 										<div class="modal-header">
 											<h5 class="modal-title" id="modal-insertar1">Insertar producto</h5>
-											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+											<button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close" style="background-color: black !important">X</button>
 										</div>
 										<div class="modal-body">
 											<form id="form-insertar" action="#" method="post">
