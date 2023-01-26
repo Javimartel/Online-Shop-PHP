@@ -211,6 +211,42 @@
 								<path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
 							  </svg>
 							</div></a></div>';
+
+						// Modal Insertar 
+						echo '<div class="modal fade" id="modal-insertar" tabindex="-1" aria-labelledby="modal-insertar1" aria-hidden="true">
+								<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="modal-insertar1">Insertar producto</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+										</div>
+										<div class="modal-body">
+											<form id="form-insertar" action="#" method="post">
+												<div class="form-group mb-2">
+													<label for="insert-name m-2">Inserta un nombre</label>
+													<input type="text" class="form-control" name="insert-name">
+												</div>
+												<div class="form-group mb-2">
+													<label for="insert-price">Inserta un precio</label>
+													<input type="number" class="form-control" name="insert-price">
+												</div>
+												<div class="form-group mb-2">
+													<label for="insert-description">Inserta una descripción</label>
+													<input type="text" name="insert-description" class="form-control">
+												</div>
+												<div class="form-group mb-2">
+													<label for="insert-image">Adjunta una imagen</label>
+													<input style="background: white !important; color: black; border: 1px solid rgb(207, 207, 207)" type="file" name="insert-image" class="form-control">
+												</div>
+												<div class="form-group">
+													<button type="submit" class="btn btn-primary" name="insert" data-bs-dismiss="modal">Insertar</button>
+													<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+												</div>
+												</form>
+										</div>
+									</div>
+								</div>
+							</div>';
 					}
 		
 		
@@ -254,41 +290,5 @@
 		</div>
 	</div>
 </section>
-
-<!-- Modal Insertar -->
-<div class="modal fade" id="modal-insertar" tabindex="-1" aria-labelledby="modal-insertar1" aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h5 class="modal-title" id="modal-insertar1">Insertar producto</h5>
-				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
-			</div>
-			<div class="modal-body">
-				<form id="form-insertar" action="#" method="post">
-					<div class="form-group mb-2">
-						<label for="insert-name m-2">Inserta un nombre</label>
-						<input type="text" class="form-control" name="insert-name">
-					</div>
-					<div class="form-group mb-2">
-						<label for="insert-price">Inserta un precio</label>
-						<input type="number" class="form-control" name="insert-price">
-					</div>
-					<div class="form-group mb-2">
-						<label for="insert-description">Inserta una descripción</label>
-						<input type="text" name="insert-description" class="form-control">
-					</div>
-					<div class="form-group mb-2">
-						<label for="insert-image">Adjunta una imagen</label>
-						<input style="background: white !important; color: black; border: 1px solid rgb(207, 207, 207)" type="file" name="insert-image" class="form-control">
-					</div>
-					<div class="form-group">
-						<button type="submit" class="btn btn-primary" name="insert" data-bs-dismiss="modal">Insertar</button>
-						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-					</div>
-					</form>
-			</div>
-		</div>
-	</div>
-</div>
 
 <?php include "./parts/footer-views.php";?>
