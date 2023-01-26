@@ -17,7 +17,7 @@
 	}
 
 	if(isset($_SESSION["user"])) {
-		// Ver el numero de productos del carrito
+		// Obtener los productos del carrito
 		include "../controllers/productsCart.php";
 	}
 ?>
