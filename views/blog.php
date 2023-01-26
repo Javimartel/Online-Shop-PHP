@@ -8,7 +8,7 @@
 
 				<div class="navbar-brand">
 					<a href="../index.php">
-						<img src="../images/img-template/main-logo.png" alt="logo">
+						<img src="../../images/img-template/img-template/main-logo.png" alt="logo">
 					</a>
 				</div>
 
@@ -86,7 +86,7 @@
 		<div class="row">
 			<div class="col-md-4 mb-5">
 				<a href="single-post.html">
-					<img src="images/blog-cake.jpg" alt="blog" class="postImg mb-3">
+					<img src="../images/img-template/blog-cake.jpg" alt="blog" class="postImg mb-3">
 				</a>
 				<div class="content">
 					<div class="meta-tags flex-container color-secondary mb-3">
@@ -107,28 +107,7 @@
 
 			<div class="col-md-4 mb-5">
 				<a href="single-post.html">
-					<img src="images/postImg2.jpg" alt="blog" class="postImg mb-3">
-				</a>
-				<div class="content">
-					<div class="meta-tags flex-container color-secondary mb-3">
-						<span class="border-right"><i class="icon icon-calendar mr-2"></i>April 21,18</span>
-						<span class="border-right"><i class="icon icon-bubble mr-2"></i>0 Comments</span>
-						<span><i class="icon icon-envelope-o mr-2"></i>News</span>
-					</div><!--meta-tags-->
-
-					<h2 class="post-title"><a href="single-post.html">How to Make a Cake with Great Delicious Chocolate</a></h2>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eisusmod tempor incidunt ut elit et.</p>
-
-					<div class="pix_btn">
-						<a href="single-post.html" class="btn-hvr-effects mt-3">read more</a>
-					</div>
-				
-				</div><!--content-->
-			</div><!--col-md-4-->
-
-			<div class="col-md-4 mb-5">
-				<a href="single-post.html">
-					<img src="images/postitem1.jpg" alt="blog" class="postImg mb-3">
+					<img src="../images/img-template/postImg2.jpg" alt="blog" class="postImg mb-3">
 				</a>
 				<div class="content">
 					<div class="meta-tags flex-container color-secondary mb-3">
@@ -149,7 +128,7 @@
 
 			<div class="col-md-4 mb-5">
 				<a href="single-post.html">
-					<img src="images/tabimg.jpg" alt="blog" class="postImg mb-3">
+					<img src="../images/img-template/postitem1.jpg" alt="blog" class="postImg mb-3">
 				</a>
 				<div class="content">
 					<div class="meta-tags flex-container color-secondary mb-3">
@@ -170,7 +149,7 @@
 
 			<div class="col-md-4 mb-5">
 				<a href="single-post.html">
-					<img src="images/postitem.jpg" alt="blog" class="postImg mb-3">
+					<img src="../images/img-template/tabimg.jpg" alt="blog" class="postImg mb-3">
 				</a>
 				<div class="content">
 					<div class="meta-tags flex-container color-secondary mb-3">
@@ -191,7 +170,28 @@
 
 			<div class="col-md-4 mb-5">
 				<a href="single-post.html">
-					<img src="images/postimg2.jpg" alt="blog" class="postImg mb-3">
+					<img src="../images/img-template/postitem.jpg" alt="blog" class="postImg mb-3">
+				</a>
+				<div class="content">
+					<div class="meta-tags flex-container color-secondary mb-3">
+						<span class="border-right"><i class="icon icon-calendar mr-2"></i>April 21,18</span>
+						<span class="border-right"><i class="icon icon-bubble mr-2"></i>0 Comments</span>
+						<span><i class="icon icon-envelope-o mr-2"></i>News</span>
+					</div><!--meta-tags-->
+
+					<h2 class="post-title"><a href="single-post.html">How to Make a Cake with Great Delicious Chocolate</a></h2>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eisusmod tempor incidunt ut elit et.</p>
+
+					<div class="pix_btn">
+						<a href="single-post.html" class="btn-hvr-effects mt-3">read more</a>
+					</div>
+				
+				</div><!--content-->
+			</div><!--col-md-4-->
+
+			<div class="col-md-4 mb-5">
+				<a href="single-post.html">
+					<img src="../images/img-template/postimg2.jpg" alt="blog" class="postImg mb-3">
 				</a>
 				<div class="content">
 					<div class="meta-tags flex-container color-secondary mb-3">
