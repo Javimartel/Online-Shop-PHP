@@ -47,7 +47,7 @@ INSERT INTO productos (name, price, description, image) VALUES
     ("Black Forest Pastry", 12, "Cake - Pastries", "../images/img-template/cake-item1.jpg"),
     ("Sprinkled Donuts", 12, "Cake - Pastries", "../images/img-template/cake-item2.jpg"),
     ("Black Forest Cupcake", 12, "Cake - Pastries", "../images/img-template/cake-item3.jpg"),
-    ("Macarons with Berries", 12, "Cake - Pastries", "../images/img-template/cake-item4.jpg"),
+    ("Macarons Berries", 12, "Cake - Pastries", "../images/img-template/cake-item4.jpg"),
     ("Lollipop", 2, "Candies", "../images/new-img/lollipop.png"),
     ("Chocolates", 10, "Chocolates", "../images/new-img/chocolates.jpg");
 
