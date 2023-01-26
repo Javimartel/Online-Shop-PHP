@@ -1,5 +1,9 @@
 <?php
-    $config = include "../config/config.php";
+    if ($index) {
+        $config = include "./config/config.php";
+    } else{
+        $config = include "../config/config.php";
+    }
     try {
         $dsn = 'mysql:host='.$config['db']['host'].';dbname='.$config['db']['name'];
         $conexion = new PDO($dsn, $config['db']['user'], $config['db']['pass'], $config['db']['options']);

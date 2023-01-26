@@ -3,7 +3,13 @@
 
 	if(isset($_SESSION["user"])) {
 		$index = true;
+		include "./controllers/removeCart.php";
+        // Obtenemos el numero de elementos del Carrito
 		include "./controllers/numberCart.php";
+        // Obtenemos todos los productos del carrito
+        include "./controllers/productsCart.php";
+        // Añadimos el offcanvas para tener el carrito en todas las páginas
+        include "./controllers/offcanvas.php";
 	}
 
 ?>
@@ -120,7 +126,7 @@
 							</form>
 						</div>
 					<div class="shopping-cart">
-						<a href="#">
+						<a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
 							<i class="icon icon-shopping-cart"></i>
 						</a>
 						<?php if (isset($_SESSION["user"])) {

@@ -46,7 +46,7 @@
 						</form>
 					</div>
 					<div class="shopping-cart">
-						<a href="#">
+						<a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
 							<i class="icon icon-shopping-cart"></i>
 						</a>
 						<?php if (isset($_SESSION["user"])) {
