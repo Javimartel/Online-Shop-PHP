@@ -2,8 +2,12 @@
 
 <?php
 	if (isset($_POST["insert"])) {
-		// Admin inserta un producto nuevo
-		include "../controllers/insertProduct.php";
+		// Si no se envían todos los campos, no se inserta nada
+		if ($_POST["insert-name"] == "" || $_POST["insert-price"] == "" || $_POST["insert-description"] == "" || $_POST["insert-image"] == "") {} 
+		else {
+			// Admin inserta un producto nuevo
+			include "../controllers/insertProduct.php";
+		}
 	}
 
 	if (isset($_POST["delete-product"])) {
