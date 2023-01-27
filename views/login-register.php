@@ -12,6 +12,13 @@
             'error' => false,
             'mensaje' => 'El usuario ' . $_POST["register-nick"] . ' ya existe'
         ];
+
+        if ($_POST["register-nick"] == "" || $_POST["register-password"] == "" || $_POST["register-email"] == "" || $_POST["register-phone"] == "") {
+            $resultado['error'] = true;
+            $resultado["mensaje"] = "Ha introducido mal algún campo";
+            goto end;
+        }
+
         $config = include "../config/config.php";
         try {
             $dsn = 'mysql:host='.$config['db']['host'].';dbname='.$config['db']['name'];
