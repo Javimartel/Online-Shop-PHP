@@ -43,7 +43,6 @@
 						<li class="nav-item text-hover active"><a href="./shop.php" class="nav-link" data-effect="Shop">Tienda</a></li>
 						<li class="nav-item text-hover"><a href="./about.php" class="nav-link" data-effect="About Us">Sobre nosotros</a></li>
 						<li class="nav-item text-hover"><a href="./contact.php" class="nav-link" data-effect="Contact">Contáctanos</a></li>
-						<!-- <li class="nav-item text-hover"><a href="./blog.php" class="nav-link" data-effect="Blogs">Blog</a></li> -->
 
 						<li class="nav-item dropdown">
 							<a href="#" data-bs-toggle="dropdown" aria-expanded="false" class="nav-link dropdown-toggle">Páginas</a>
@@ -75,7 +74,7 @@
 						}
 						?>
 					</div>
-				</div><!--action-menu-->
+				</div>
 
 			</nav>
 
@@ -100,7 +99,7 @@
 			</div>
 		</div>
 	</div>
-</div><!--site-banner-->
+</div>
 
 <section class="our-team bg-sand padding-large">
 	<div class="container">
@@ -243,49 +242,8 @@
 				} catch (PDOException $error) {}
 			?>
 
-				<!-- <div class="product-item col-md-3 pb-4">
-					<a href="./single-product.php" class="product-image"><img src="../images/img-template/cake-item1.jpg"></a>
-					<div class="text-comtent text-center">
-						<h5 class="pt-4"><a href="./single-product.php">Black Forest Pastry</a></h5>
-						<p>Cake - Pastries</p>
-						<span class="price colored">$12</span>
-					</div>
-				</div>
-				<div class="product-item col-md-3 pb-4">
-					<a href="./single-product.php" class="product-image"><img src="../images/img-template/cake-item2.jpg"></a>
-					<div class="text-comtent text-center">
-						<h5 class="pt-4"><a href="./single-product.php">Sprinkled Donuts</a></h5>
-						<p>Cake - Pastries</p>
-						<span class="price colored">$12</span>
-					</div>
-				</div>
-				<div class="product-item col-md-3 pb-4">
-					<a href="./single-product.php" class="product-image"><img src="../images/img-template/cake-item3.jpg"></a>
-					<div class="text-comtent text-center">
-						<h5 class="pt-4"><a href="./single-product.php">Black Forest Cupcake</a></h5>
-						<p>Cake - Pastries</p>
-						<span class="price colored">$12</span>
-					</div>
-				</div>
-				<div class="product-item col-md-3 pb-4">
-					<a href="./single-product.php" class="product-image"><img src="../images/img-template/cake-item4.jpg"></a>
-				    <div class="text-comtent text-center">
-						<h5 class="pt-4"><a href="./single-product.php">Macarons with Berries</a></h5>
-						<p>Cake - Pastries</p>
-						<span class="price colored">$12</span>
-					</div>
-				</div -->
-				
-
 		</div>
 	</div>
 </section>
-
-<!-- <script>
-const buttons = document.querySelectorAll('removed-carrito');
-for (let i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener('click', e => e.preventDefault());
-}
-</script> -->
 
 <?php include "./parts/footer-views.php";?>

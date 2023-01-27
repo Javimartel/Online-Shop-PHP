@@ -76,11 +76,11 @@
 					</ul>
 				</div>
 
-				</div><!--flex-container-->
+				</div>
 
 			</div>
 		</div>
-	</div><!----top-menu---->
+	</div>
 
 	<header id="header">
 		<div class="container">
@@ -104,7 +104,6 @@
 						<li class="nav-item text-hover"><a href="./views/shop.php" class="nav-link" data-effect="Shop">Tienda</a></li>
 						<li class="nav-item text-hover"><a href="./views/about.php" class="nav-link" data-effect="About Us">Sobre nosotros</a></li>
 						<li class="nav-item text-hover"><a href="./views/contact.php" class="nav-link" data-effect="Contact">Contáctanos</a></li>
-						<!-- <li class="nav-item text-hover"><a href="./views/blog.php" class="nav-link" data-effect="Blogs">Blog</a></li> -->
 
 						<li class="nav-item dropdown">
 							<a href="#" data-bs-toggle="dropdown" aria-expanded="false" class="nav-link dropdown-toggle">Páginas</a>
@@ -136,7 +135,7 @@
 						}
 						?>
 					</div>
-					</div><!--action-menu-->
+					</div>
 
 				</nav>
 

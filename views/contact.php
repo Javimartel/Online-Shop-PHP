@@ -22,7 +22,6 @@
 						<li class="nav-item text-hover"><a href="./shop.php" class="nav-link" data-effect="Shop">Tienda</a></li>
 						<li class="nav-item text-hover"><a href="./about.php" class="nav-link" data-effect="About Us">Sobre nosotros</a></li>
 						<li class="nav-item text-hover active"><a href="./contact.php" class="nav-link" data-effect="Contact">Contáctanos</a></li>
-						<!-- <li class="nav-item text-hover"><a href="./blog.php" class="nav-link" data-effect="Blogs">Blog</a></li> -->
 
 						<li class="nav-item dropdown">
 							<a href="#" data-bs-toggle="dropdown" aria-expanded="false" class="nav-link dropdown-toggle">Páginas</a>
@@ -54,7 +53,7 @@
 						}
 						?>
 					</div>
-				</div><!--action-menu-->
+				</div>
 
 			</nav>
 
@@ -79,7 +78,7 @@
 			</div>
 		</div>
 	</div>
-</div><!--site-banner-->
+</div>
 
 <section class="contact-information padding-large mt-3">
 	<div class="container">
@@ -95,7 +94,7 @@
 							<li><i class="icon icon-phone"></i>+1650-243-0000</li>
 							<li><i class="icon icon-phone"></i>+1650-243-0000</li>
 						</ul>
-					</div><!--detail-->
+					</div>
 					<div class="detail mb-4">
 						<h3>Emails</h3>
 						<ul class="list-unstyled">
@@ -104,7 +103,7 @@
 							<li><i class="icon icon-envelope-o"></i>
 								<a href="mailto:info@bakery.com">info@bakery.com</a></li>
 						</ul>
-					</div><!--detail-->
+					</div>
 					<div class="address detail mb-4">
 						<h3>Address</h3>
 						<ul class="list-unstyled">
@@ -113,7 +112,7 @@
 							<li><i class="icon icon-map-marker"></i>
 								North Melbourne VIC 3051, Australia</li>
 						</ul>
-					</div><!--detail-->					
+					</div>					
 					<div class="detail mb-4">
 						<h3>Social Links</h3>
 						<div class="social-links flex-container">
@@ -122,12 +121,12 @@
 							<a href="#" class="icon icon-pinterest-p"></a>
 							<a href="#" class="icon icon-youtube"></a>
 							<a href="#" class="icon icon-linkedin"></a>
-						</div><!--social-links-->
-					</div><!--detail-->
+						</div>
+					</div>
 
-				</div><!--contact-detail-->
 				</div>
-			</div><!--col-md-6-->
+				</div>
+			</div>
 
 			<div class="col-md-6 p-0">
 				<div class="container">
@@ -138,14 +137,14 @@
 								<div class="text-input flex-container">
 								<input type="text" name="name" placeholder="Name" class="name mr-3 mb-3">
 								<input type="text" name="email" placeholder="E-mail" class="mb-3">
-								</div><!--text-input-->
+								</div>
 								<textarea name="message" placeholder="Message" style="height: 150px;"></textarea>
 								<button type="submit" name="submit">Submit</button>
 							</form>
-						</div><!--contact-information-->
+						</div>
 					</div>
 				</div>
-			</div><!--col-md-6-->
+			</div>
 
 		</div>
 	</div>

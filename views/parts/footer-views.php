@@ -16,7 +16,7 @@
                             <button class="btn-hvr-effects">Suscribirse</button>
                         </div>
                         
-                    </div><!--widget-newsletter-->
+                    </div>
 
                     <div class="working-schedule">
                         <h4 class="widget-title">Horario</h4>
@@ -31,7 +31,7 @@
                             </ul>
                         </div>
                     </div>
-                </div><!--col-md-4-->
+                </div>
 
                 <div class="col-md-2">
                     <div class="quick-links">
@@ -48,7 +48,7 @@
                     </div>
                 </div>
 
-                </div><!--content-->
+                </div>
 
             </div>
         </div>

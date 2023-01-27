@@ -22,7 +22,6 @@
 						<li class="nav-item text-hover"><a href="./shop.php" class="nav-link" data-effect="Shop">Tienda</a></li>
 						<li class="nav-item text-hover active"><a href="./about.php" class="nav-link" data-effect="About Us">Sobre nosotros</a></li>
 						<li class="nav-item text-hover"><a href="./contact.php" class="nav-link" data-effect="Contact">Contáctanos</a></li>
-						<!-- <li class="nav-item text-hover"><a href="./blog.php" class="nav-link" data-effect="Blogs">Blog</a></li> -->
 
 						<li class="nav-item dropdown">
 							<a href="#" data-bs-toggle="dropdown" aria-expanded="false" class="nav-link dropdown-toggle">Páginas</a>
@@ -54,7 +53,7 @@
 						}
 						?>
 					</div>
-				</div><!--action-menu-->
+				</div>
 
 			</nav>
 
@@ -79,7 +78,7 @@
 			</div>
 		</div>
 	</div>
-</div><!--site-banner-->
+</div>
 
 <section class="chief-detail padding-large">
 	<div class="container">
@@ -121,7 +120,7 @@
 
 					</div>
 
-				</div><!--col-md-3-->
+				</div>
 
 				<div class="col-md-3 text-center">
 
@@ -138,10 +137,10 @@
 								<a href="#" class="icon icon-twitter pr-10"></a>
 								<a href="#" class="icon icon-pinterest-p"></a>
 							</div>
-						</div><!--text-content-->
+						</div>
 					</div>
 
-				</div><!--col-md-3-->
+				</div>
 
 				<div class="col-md-3 text-center">
 
@@ -158,10 +157,10 @@
 								<a href="#" class="icon icon-twitter pr-10"></a>
 								<a href="#" class="icon icon-pinterest-p"></a>
 							</div>
-						</div><!--text-content-->
+						</div>
 					</div>
 
-				</div><!--col-md-3-->
+				</div>
 
 				<div class="col-md-3 text-center">
 
@@ -178,10 +177,10 @@
 								<a href="#" class="icon icon-twitter pr-10"></a>
 								<a href="#" class="icon icon-pinterest-p"></a>
 							</div>
-						</div><!--text-content-->
+						</div>
 					</div>
 
-				</div><!--col-md-3-->
+				</div>
 
 		</div>
 	</div>
@@ -207,7 +206,7 @@
 						</div>
 				</div>
 				</div>
-			</div><!--panel-->
+			</div>
 
 			<div class="accordion-item">
 				<div class="accordion-header">
@@ -222,7 +221,7 @@
 						</div>
 				</div>
 				</div>
-			</div><!--panel-->
+			</div>
 
 			<div class="accordion-item">
 				<div class="accordion-header">
@@ -237,9 +236,9 @@
 						</div>
 				</div>
 				</div>
-			</div><!--panel-->
+			</div>
 
-		</div><!--panel-group-->
+		</div>
 
 		</div>
 	</div>
@@ -258,7 +257,7 @@
 					<span class="date">2018 - 2020</span>
 					<p>Bakery is a free HTML CSS Template by Templates Jungle specially crafted for Bakeries.</p>
 				</div>
-			</div><!--achivement-block-->
+			</div>
 			<div class="achivement-block text-center col-md-4">
 				<img src="../images/img-template/badge1.png" alt="badge">
 				<div class="mt-3">
@@ -266,7 +265,7 @@
 					<span class="date">2018 - 2020</span>
 					<p>Bakery is a free HTML CSS Template by Templates Jungle specially crafted for Bakeries.</p>
 				</div>
-			</div><!--achivement-block-->
+			</div>
 			<div class="achivement-block text-center col-md-4">
 				<img src="../images/img-template/badge2.png" alt="badge">
 				<div class="mt-3">
@@ -274,7 +273,7 @@
 					<span class="date">2018 - 2020</span>
 					<p>Bakery is a free HTML CSS Template by Templates Jungle specially crafted for Bakeries.</p>
 				</div>
-			</div><!--achivement-block-->
+			</div>
 
 		</div>
 	</div>

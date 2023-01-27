@@ -22,7 +22,6 @@
 						<li class="nav-item text-hover"><a href="./shop.php" class="nav-link" data-effect="Shop">Tienda</a></li>
 						<li class="nav-item text-hover"><a href="./about.php" class="nav-link" data-effect="About Us">Sobre nosotros</a></li>
 						<li class="nav-item text-hover"><a href="./contact.php" class="nav-link" data-effect="Contact">Contáctanos</a></li>
-						<!-- <li class="nav-item text-hover"><a href="./blog.php" class="nav-link" data-effect="Blogs">Blog</a></li> -->
 
 						<li class="nav-item dropdown">
 							<a href="#" data-bs-toggle="dropdown" aria-expanded="false" class="nav-link dropdown-toggle">Páginas</a>
@@ -54,7 +53,7 @@
 						}
 						?>
 					</div>
-				</div><!--action-menu-->
+				</div>
 
 			</nav>
 
@@ -82,7 +81,7 @@
 			</div>
 		</div>
 	</div>
-</div><!--site-banner-->
+</div>
 
 
 <div class="content-area margin-large border-bottom">
@@ -100,8 +99,8 @@
 
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eisusmod tempor incidunt ut elit et.Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eisusmod tempor incidunt ut elit et.</p>
 						
-					</div><!--post-content-->
-				</div><!--post-detail-->
+					</div>
+				</div>
 
 		<section class="comments-wrap mb-4">
 			<h3>Comments</h3>
@@ -114,12 +113,12 @@
 							<h4>Michael Watson</h4>
 							<span class="meta-date">Dec 2,2020</span>
 							<small class="comments-reply"><a href="#"><i class="icon icon-mail-reply"></i>Reply</a></small>
-						</div><!--meta-tags-->
+						</div>
 
 						<p>Tristique tempis condimentum diam done ullancomroer sit element henddg sit he consequert.Tristique tempis condimentum diam done ullancomroer sit element henddg sit he consequert.</p>
 					</div>
 
-				</article><!--flex-container-->
+				</article>
 
 			<div class="child-comments">
 				<article class="flex-container d-flex">
@@ -129,15 +128,15 @@
 							<h4>Chris Gyale</h4>
 							<span class="meta-date">Dec 3,2020</span>
 							<small class="comments-reply"><a href="#"><i class="icon icon-mail-reply"></i>Reply</a></small>
-						</div><!--meta-tags-->
+						</div>
 
 						<p>Lorem diam done ullancomroer sit element henddg sit he consequert.Tristique tempis condimentum diam done ullancomroer sit element henddg sit he consequert.</p>
 					</div>
 
-				</article><!--flex-container-->
-			</div><!--child-comments-->
+				</article>
+			</div>
 
-			</div><!--comment-list-->
+			</div>
 
 		</section>
 
@@ -175,7 +174,7 @@
 					<div class="search-box d-flex">
 						<input type="text" name="search" class="border" class="mt-3">
 						<a href="#" class="btn-search btn-hvr-effects"><i class="icon icon-search"></i></a>
-					</div><!--search-box-->
+					</div>
 				</div>
 
 				<div class="categories-box sidebar-box">
@@ -187,7 +186,7 @@
 						<li><a href="#">Cooking</a><span>(2)</span></li>
 						<li><a href="#">World Restaurants</a><span>(3)</span></li>
 					</ul>		
-				</div><!--.categories-box-->
+				</div>
 
 			<div class="recent-post-box sidebar-box">
 				<h3>Recent Posts</h3>
@@ -230,7 +229,7 @@
 
 				</div>
 
-		</div><!--.recent-post-box-->
+		</div>
 
 		<div class="post-tags-box sidebar-box">
 			<h3>Tags</h3>
@@ -243,14 +242,14 @@
 				<a href="#">Cupcakes,</a>
 				<a href="#">Donuts</a>
 			</div>
-		</div><!--.tags-box-->
+		</div>
 
-			</div><!--container-->
+			</div>
 			</div>
 		</aside>
 
 		</div>
 	</div>
-</div><!--content-area-->
+</div>
 
 <?php include "./parts/footer-views.php";?>

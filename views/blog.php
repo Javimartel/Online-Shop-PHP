@@ -22,7 +22,6 @@
 						<li class="nav-item text-hover"><a href="./shop.php" class="nav-link" data-effect="Shop">Tienda</a></li>
 						<li class="nav-item text-hover"><a href="./about.php" class="nav-link" data-effect="About Us">Sobre nosotros</a></li>
 						<li class="nav-item text-hover"><a href="./contact.php" class="nav-link" data-effect="Contact">Contáctanos</a></li>
-						<!-- <li class="nav-item text-hover"><a href="./blog.php" class="nav-link" data-effect="Blogs">Blog</a></li> -->
 
 						<li class="nav-item dropdown">
 							<a href="#" data-bs-toggle="dropdown" aria-expanded="false" class="nav-link dropdown-toggle">Páginas</a>
@@ -54,7 +53,7 @@
 						}
 						?>
 					</div>
-				</div><!--action-menu-->
+				</div>
 
 			</nav>
 
@@ -79,7 +78,7 @@
 			</div>
 		</div>
 	</div>
-</div><!--site-banner-->
+</div>
 
 <section class="post-grid margin-large border-bottom">
 	<div class="container">
@@ -93,7 +92,7 @@
 						<span class="border-right"><i class="icon icon-calendar mr-2"></i>April 21,18</span>
 						<span class="border-right"><i class="icon icon-bubble mr-2"></i>0 Comments</span>
 						<span><i class="icon icon-envelope-o mr-2"></i>News</span>
-					</div><!--meta-tags-->
+					</div>
 
 					<h2 class="post-title"><a href="single-post.html">How to Make a Cake with Great Delicious Chocolate</a></h2>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eisusmod tempor incidunt ut elit et.</p>
@@ -102,8 +101,8 @@
 						<a href="single-post.html" class="btn-hvr-effects mt-3">read more</a>
 					</div>
 
-				</div><!--content-->
-			</div><!--col-md-4-->
+				</div>
+			</div>
 
 			<div class="col-md-4 mb-5">
 				<a href="single-post.html">
@@ -114,7 +113,7 @@
 						<span class="border-right"><i class="icon icon-calendar mr-2"></i>April 21,18</span>
 						<span class="border-right"><i class="icon icon-bubble mr-2"></i>0 Comments</span>
 						<span><i class="icon icon-envelope-o mr-2"></i>News</span>
-					</div><!--meta-tags-->
+					</div>
 
 					<h2 class="post-title"><a href="single-post.html">How to Make a Cake with Great Delicious Chocolate</a></h2>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eisusmod tempor incidunt ut elit et.</p>
@@ -123,8 +122,8 @@
 						<a href="single-post.html" class="btn-hvr-effects mt-3">read more</a>
 					</div>
 				
-				</div><!--content-->
-			</div><!--col-md-4-->
+				</div>
+			</div>
 
 			<div class="col-md-4 mb-5">
 				<a href="single-post.html">
@@ -135,7 +134,7 @@
 						<span class="border-right"><i class="icon icon-calendar mr-2"></i>April 21,18</span>
 						<span class="border-right"><i class="icon icon-bubble mr-2"></i>0 Comments</span>
 						<span><i class="icon icon-envelope-o mr-2"></i>News</span>
-					</div><!--meta-tags-->
+					</div>
 
 					<h2 class="post-title"><a href="single-post.html">How to Make a Cake with Great Delicious Chocolate</a></h2>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eisusmod tempor incidunt ut elit et.</p>
@@ -144,8 +143,8 @@
 						<a href="single-post.html" class="btn-hvr-effects mt-3">read more</a>
 					</div>
 				
-				</div><!--content-->
-			</div><!--col-md-4-->
+				</div>
+			</div>
 
 			<div class="col-md-4 mb-5">
 				<a href="single-post.html">
@@ -156,7 +155,7 @@
 						<span class="border-right"><i class="icon icon-calendar mr-2"></i>April 21,18</span>
 						<span class="border-right"><i class="icon icon-bubble mr-2"></i>0 Comments</span>
 						<span><i class="icon icon-envelope-o mr-2"></i>News</span>
-					</div><!--meta-tags-->
+					</div>
 
 					<h2 class="post-title"><a href="single-post.html">How to Make a Cake with Great Delicious Chocolate</a></h2>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eisusmod tempor incidunt ut elit et.</p>
@@ -165,8 +164,8 @@
 						<a href="single-post.html" class="btn-hvr-effects mt-3">read more</a>
 					</div>
 				
-				</div><!--content-->
-			</div><!--col-md-4-->
+				</div>
+			</div>
 
 			<div class="col-md-4 mb-5">
 				<a href="single-post.html">
@@ -177,7 +176,7 @@
 						<span class="border-right"><i class="icon icon-calendar mr-2"></i>April 21,18</span>
 						<span class="border-right"><i class="icon icon-bubble mr-2"></i>0 Comments</span>
 						<span><i class="icon icon-envelope-o mr-2"></i>News</span>
-					</div><!--meta-tags-->
+					</div>
 
 					<h2 class="post-title"><a href="single-post.html">How to Make a Cake with Great Delicious Chocolate</a></h2>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eisusmod tempor incidunt ut elit et.</p>
@@ -186,8 +185,8 @@
 						<a href="single-post.html" class="btn-hvr-effects mt-3">read more</a>
 					</div>
 				
-				</div><!--content-->
-			</div><!--col-md-4-->
+				</div>
+			</div>
 
 			<div class="col-md-4 mb-5">
 				<a href="single-post.html">
@@ -198,7 +197,7 @@
 						<span class="border-right"><i class="icon icon-calendar mr-2"></i>April 21,18</span>
 						<span class="border-right"><i class="icon icon-bubble mr-2"></i>0 Comments</span>
 						<span><i class="icon icon-envelope-o mr-2"></i>News</span>
-					</div><!--meta-tags-->
+					</div>
 
 					<h2 class="post-title"><a href="single-post.html">How to Make a Cake with Delicious Chocolate</a></h2>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eisusmod tempor incidunt ut elit et.</p>
@@ -207,8 +206,8 @@
 						<a href="single-post.html" class="btn-hvr-effects mt-3">read more</a>
 					</div>
 				
-				</div><!--content-->
-			</div><!--col-md-4-->			
+				</div>
+			</div>			
 
 		</div>
 	</div>

@@ -1,66 +1,5 @@
 <?php include "./views/parts/header.php";?>
 
-<!-- <section id="billboard">
-	<div class="main-slider">
-		
-		<div class="slider-item">
-			
-			<figure>
-				<img src="./images/img-template/banner1.jpg">
-			</figure>
-			
-			<div class="text-content col-md-8">
-				<span>- FRESHLY BAKED EVERY MORNING</span>
-				<h2 class="text-uppercase colored padding-xsmall"><a href="#">delicious cupcakes for you</a></h2>
-				<p>A gorgeous selection of our favorites for a client to send as a new year’s gift.A gorgeous selection of our favorites for a client to send as a new year’s gift</p>
-				<div class="pix_btn">
-					<a href="#" class="btn-hvr-effects mt-3">Shop Now</a>
-				</div>
-			</div>
-
-
-		</div>
-
-		<div class="slider-item">
-			
-			<figure>
-				<img src="./images/img-template/banner2.jpg">
-			</figure>
-			
-			<div class="text-content col-md-8">
-				<span>- FRESHLY BAKED EVERY MORNING</span>
-				<h2 class="text-uppercase colored padding-xsmall"><a href="">Enjoy with these cakes</a></h2>
-				<p>A gorgeous selection of our favorites for a client to send as a new year’s gift.A gorgeous selection of our favorites for a client to send as a new year’s gift</p>
-				<div class="pix_btn">
-					<a href="#" class="btn-hvr-effects mt-3">Shop Now</a>
-				</div>
-			</div>
-
-				
-		</div>
-
-		<div class="slider-item">
-			
-			<figure>
-				<img src="./images/img-template/banner1.jpg">
-			</figure>	
-								
-			<div class="text-content col-md-8">
-				<span>- FRESHLY BAKED EVERY MORNING</span>
-				<h2 class="text-uppercase colored padding-xsmall"><a href="">delicious cupcakes for you</a></h2>
-				<p>A gorgeous selection of our favorites for a client to send as a new year’s gift.A gorgeous selection of our favorites for a client to send as a new year’s gift</p>
-				<div class="pix_btn">
-					<a href="#" class="btn-hvr-effects mt-3">Shop Now</a>
-				</div>
-			</div>
-
-					
-		</div>
-
-	</div>
-
-</section> -->
-
 <div class="site-banner">
 	<div class="banner-content">
 		<div class="container">
@@ -115,8 +54,8 @@
 									</div>
 								</div>
 							</div>
-						</div><!--content-->
-					</div><!--tab-pane-->
+						</div>
+					</div>
 
 					<div class="tab-pane fade" role="tabpanel" id="nav-values" aria-labelledby="nav-values-tab">
 						<div class="col-md-12">
@@ -136,8 +75,8 @@
 									</div>
 								</div>
 							</div>
-						</div><!--col-md-12-->
-					</div><!--tab-panel-->
+						</div>
+					</div>
 
 					<div class="tab-pane fade" role="tabpanel" id="nav-goals" aria-labelledby="nav-goals-tab">
 						<div class="col-md-12">
@@ -157,12 +96,12 @@
 									</div>
 								</div>
 							</div>
-						</div><!--content-->
-					</div><!--tab-panel-->
+						</div>
+					</div>
 
-				</div><!--tab-content-->
+				</div>
 
-			</div><!---with-nav-tabs--->
+			</div>
 		</div>
 	</div>				
 
@@ -215,7 +154,7 @@
 					</div>
 				</div>
 
-			</div><!--slider-->
+			</div>
 		</div>
 	</div>
 </section>
@@ -230,7 +169,7 @@
 						<img src="./images/img-template/blackforest.jpg" alt="cake" class="galleryImg">
 						<div class="overlay">
 							<i class="icon icon-search-plus"></i>
-						</div><!--imgOverlay-->
+						</div>
 					</a>
 				</figure>
 				<figure class="col-md-4 mb-3 pl-0">
@@ -238,7 +177,7 @@
 						<img src="./images/img-template/macarons.jpg" alt="cake" class="galleryImg">
 						<div class="overlay">
 							<i class="icon icon-search-plus"></i>
-						</div><!--imgOverlay-->
+						</div>
 					</a>
 				</figure>
 				<figure class="col-md-4 mb-3 pl-0">
@@ -246,7 +185,7 @@
 						<img src="./images/img-template/blackforest.jpg" alt="cake" class="galleryImg">
 						<div class="overlay">
 							<i class="icon icon-search-plus"></i>
-						</div><!--imgOverlay-->
+						</div>
 					</a>
 				</figure>
 				<figure class="col-md-4 mb-3 pl-0">
@@ -254,7 +193,7 @@
 						<img src="./images/img-template/blackforest.jpg" alt="cake" class="galleryImg">
 						<div class="overlay">
 							<i class="icon icon-search-plus"></i>
-						</div><!--imgOverlay-->
+						</div>
 					</a>
 				</figure>
 				<figure class="col-md-4 mb-3 pl-0">
@@ -262,7 +201,7 @@
 						<img src="./images/img-template/macarons.jpg" alt="cake" class="galleryImg">
 						<div class="overlay">
 							<i class="icon icon-search-plus"></i>
-						</div><!--imgOverlay-->
+						</div>
 					</a>
 				</figure>
 				<figure class="col-md-4 mb-3 pl-0">
@@ -270,10 +209,10 @@
 						<img src="./images/img-template/sprinkleddonuts.jpg" alt="cake" class="galleryImg">
 						<div class="overlay">
 							<i class="icon icon-search-plus"></i>
-						</div><!--imgOverlay-->
+						</div>
 					</a>
 				</figure>
-			</div><!--content-->
+			</div>
 			<div class="pix_btn text-center m-auto">
 				<a href="#" class="btn-hvr-effects mt-3">View All</a>
 			</div>
@@ -302,7 +241,7 @@
 						<img src="./images/img-template/default.png" alt="jane">
 						<span class="name d-flex justify-content-center mt-3">Jane Marie</span>
 					</div>
-				</div><!--reviews-info-->
+				</div>
 
 				<div class="testimonials-inner">
 					<div class="rating padding-small">
@@ -317,7 +256,7 @@
 						<img src="./images/img-template/default.png" alt="simran">
 						<span class="name d-flex justify-content-center mt-3">Simran</span>
 					</div>
-				</div><!--reviews-info-->
+				</div>
 
 				<div class="testimonials-inner">
 					<div class="rating padding-small">
@@ -332,12 +271,12 @@
 						<img src="./images/img-template/default.png" alt="jane">
 						<span class="name d-flex justify-content-center mt-3">John Marie</span>
 					</div>
-				</div><!--reviews-info-->
+				</div>
 
-				</div><!--testimonial-slider-->
+				</div>
 
 				
-				</div><!--col-md-12-->
+				</div>
 		</div>
 	</div>
 </section>
@@ -363,7 +302,7 @@
 						<span class="highlight">March 10, 2020</span>
 						<h3 class="mt-3"><a href="./views/single-post.php">How to Make a Cake with Great Delicious Chocolate</a></h3>
 					</div>
-				</div><!--post-->
+				</div>
 
 				<div class="post-content">
 					<a href="./views/single-post.php"><img src="./images/img-template/postLong.jpg" alt="cake" class="horizontalImg"></a>
@@ -371,7 +310,7 @@
 						<span class="highlight">March 10, 2020</span>
 						<h3 class="mt-3"><a href="./views/single-post.php">How to Make a Cake with Great Delicious Chocolate</a></h3>
 					</div>
-				</div><!--post-->
+				</div>
 			</div>
 		</div>
 	</div>
