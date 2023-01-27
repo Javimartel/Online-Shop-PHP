@@ -51,21 +51,4 @@ INSERT INTO productos (name, price, description, image) VALUES
     ("Lollipop", 2, "Candies", "../images/new-img/lollipop.png"),
     ("Chocolates", 10, "Chocolates", "../images/new-img/chocolates.jpg");
 
--- Insertamos una compra
-INSERT INTO carrito (id_user, id_product) VALUES
-    (2, 2),
-    (3, 3);
 
--- Comprobamos el carrito
-SELECT usuarios.nick, productos.name 
-FROM usuarios INNER JOIN carrito
-ON usuarios.id_user = carrito.id_user
-INNER JOIN productos
-ON productos.id_product = carrito.id_product;
-
--- Consulta para obtener los productos del carrito de un usuario
-SELECT productos.id_product, productos.name, productos.price, productos.description, productos.image 
-FROM productos INNER JOIN carrito
-ON productos.id_product = carrito.id_product
-INNER JOIN usuarios
-ON usuarios.id_user = carrito.id_user WHERE carrito.id_user = 2;
