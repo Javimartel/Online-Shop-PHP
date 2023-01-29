@@ -45,9 +45,12 @@
                 }
             }
 
+            // Hasheamos la contraseña para que sea segura
+            $hash_pw = password_hash(trim(strip_tags($_POST["register-password"])), PASSWORD_DEFAULT);
+
             $usuario = [
                 "nick" => trim(strip_tags($_POST["register-nick"])),
-                "password" => trim(strip_tags($_POST["register-password"])),
+                "password" => $hash_pw,
                 "email" => trim(strip_tags($_POST["register-email"])),
                 "phone" => trim(strip_tags($_POST["register-phone"]))
             ];
@@ -82,12 +85,8 @@
     // Muestra el error y vuelve al html
     goto html;
     } else {
-?>  
-        <!-- Si no ha habido error, este script te envía a "../index.php" -->
-		<script type="text/javascript">
-			window.location.href = "../index.php";
-		</script>
-<?php
+        // Si todo es correcto te redirige a "../index.php"
+        header("Location: ../index.php");
 	}
         } catch (PDOException $error) {
             $resultado['error'] = true;
@@ -117,8 +116,8 @@
             foreach ($usuarios as $data) {
                 // Comprobamos que el usuario es el mismo
                 if (trim(strip_tags($_POST["login-nick"])) === $data[0]) {
-                    // Comprobamos que la contraseña es la misma
-                    if (trim(strip_tags($_POST["login-password"])) === $data[1]) {
+                    // Comprobamos que la contraseña es la misma del usuario
+                    if (password_verify(trim(strip_tags($_POST["login-password"])), $data[1])) {
                         // Si todo es correcto, iniciamos la sesión con el usuario registrado
                         $_SESSION["user"]["nick"] = $_POST["login-nick"];
                         $_SESSION["user"]["password"] = $_POST["login-password"];
@@ -130,12 +129,8 @@
                         $resultado['mensaje'] = "La contraseña para " . $_POST["login-nick"] . " es incorrecta";
                         goto end;
                     }
-                ?>
-                    <!-- Si todo es correcto este script te manda a "../index.php" -->
-                    <script type="text/javascript">
-                        window.location.href = "../index.php";
-                    </script>
-                <?php
+                    // Si todo es correcto te redirige a "../index.php"
+                    header("Location: ../index.php");
                 }
             }
 
