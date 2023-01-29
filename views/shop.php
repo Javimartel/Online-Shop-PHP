@@ -142,7 +142,7 @@
 							</div>
 							<div class="form-group mb-2">
 								<label for="update-price">Precio del producto</label>
-								<input type="number" class="form-control" name="update-price" value="'.$data[2].'">
+								<input type="number" min=0 class="form-control" name="update-price" value="'.$data[2].'">
 							</div>
 							<div class="form-group mb-2">
 								<label for="update-description">Descripción del producto</label>
@@ -218,7 +218,7 @@
 												</div>
 												<div class="form-group mb-2">
 													<label for="insert-price">Inserta un precio</label>
-													<input type="number" class="form-control" name="insert-price">
+													<input type="number" min=0 class="form-control" name="insert-price">
 												</div>
 												<div class="form-group mb-2">
 													<label for="insert-description">Inserta una descripción</label>
