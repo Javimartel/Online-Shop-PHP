@@ -49,5 +49,3 @@ INSERT INTO productos (name, price, description, image) VALUES
     ("Macarons Berries", 12, "Cake - Pastries", "../images/img-template/cake-item4.jpg"),
     ("Lollipop", 2, "Candies", "../images/new-img/lollipop.png"),
     ("Chocolates", 10, "Chocolates", "../images/new-img/chocolates.jpg");
-
-
