@@ -19,6 +19,12 @@
             goto end;
         }
 
+        if ($_POST["register-password"] != $_POST["register-confirm-pw"]) {
+            $resultado['error'] = true;
+            $resultado["mensaje"] = "Ha introducido mal las contraseñas";
+            goto end;
+        }
+
         $config = include "../config/config.php";
         try {
             $dsn = 'mysql:host='.$config['db']['host'].';dbname='.$config['db']['name'];
