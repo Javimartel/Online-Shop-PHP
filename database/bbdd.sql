@@ -9,7 +9,7 @@ USE tienda;
 CREATE TABLE IF NOT EXISTS usuarios (
     id_user INT(11) AUTO_INCREMENT PRIMARY KEY,
     nick VARCHAR(30) NOT NULL,
-    password VARCHAR(30) NOT NULL,
+    password VARCHAR(100) NOT NULL,
     email VARCHAR(50) NOT NULL,
     phone INT(9) NOT NULL,
     admin BOOLEAN NOT NULL DEFAULT 0
@@ -34,13 +34,12 @@ CREATE TABLE IF NOT EXISTS carrito (
 
 -- Insertamos un admin
 INSERT INTO usuarios (nick, password, email, phone, admin) VALUES (
-    "admin", "admin", "admin@gmail.com", 111111111, 1
+    "admin", "$2y$10$Utt.bH1OSKXWuOoj2bm0fesE8NjbavvU8B6ryL3Sd6NLce2BiRkIe", "admin@gmail.com", 111111111, 1
 );
 
 -- Insertamos usuarios
 INSERT INTO usuarios (nick, password, email, phone) VALUES 
-    ("Javi", "123", "javi@gmail.com", 123456789),
-    ("Test", "123", "test@gmail.com", 987654321);
+    ("Javi", "$2y$10$kcf3R/QIKNl56.MUYx1okOYa7ruNdsmtfPtYfwUEjrzuTYqlSvALu", "javi@gmail.com", 123456789);
 
 -- Insertamos productos
 INSERT INTO productos (name, price, description, image) VALUES
