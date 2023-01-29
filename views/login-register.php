@@ -42,10 +42,10 @@
             }
 
             $usuario = [
-                "nick" => $_POST["register-nick"],
-                "password" => $_POST["register-password"],
-                "email" => $_POST["register-email"],
-                "phone" => $_POST["register-phone"]
+                "nick" => trim(strip_tags($_POST["register-nick"])),
+                "password" => trim(strip_tags($_POST["register-password"])),
+                "email" => trim(strip_tags($_POST["register-email"])),
+                "phone" => trim(strip_tags($_POST["register-phone"]))
             ];
             $consultaSQL = "INSERT INTO usuarios (nick, password, email, phone)";
             $consultaSQL .= "VALUES (:" . implode(", :", array_keys($usuario)) . ")";

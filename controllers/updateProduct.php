@@ -6,14 +6,14 @@
         
         // Si no han cambiado la imagen, le asignamos la anterior
         if ($_POST["update-image"] == "") {
-            $image = $_POST["img-product"];
+            $image = trim(strip_tags($_POST["img-product"]));
         } else {
-            $image = "../images/new-img/".$_POST["update-image"];
+            $image = "../images/new-img/".trim(strip_tags($_POST["update-image"]));
         }
 
         $consultaSQL = 'UPDATE productos
-                        SET name = "'.$_POST["update-name"].'", price = "'.$_POST["update-price"].'", description = "'.$_POST["update-description"].'", image = "'.$image.'"
-                        WHERE id_product = "'.$_POST["id-product"].'"';
+                        SET name = "'.trim(strip_tags($_POST["update-name"])).'", price = "'.trim(strip_tags($_POST["update-price"])).'", description = "'.trim(strip_tags($_POST["update-description"])).'", image = "'.$image.'"
+                        WHERE id_product = "'.trim(strip_tags($_POST["id-product"])).'"';
         $sentencia = $conexion->prepare($consultaSQL);
         $sentencia->execute();
 

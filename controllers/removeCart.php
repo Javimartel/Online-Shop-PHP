@@ -10,7 +10,7 @@
             $conexion = new PDO($dsn, $config['db']['user'], $config['db']['pass'], $config['db']['options']);
 
             // Eliminamos del carrito
-            $consultaSQL = 'DELETE FROM carrito WHERE id_product = "'.$_POST["id-product"].'" AND purchase_date = "'.$_POST["purchase-date"].'"';
+            $consultaSQL = 'DELETE FROM carrito WHERE id_product = "'.trim(strip_tags($_POST["id-product"])).'" AND purchase_date = "'.trim(strip_tags($_POST["purchase-date"])).'"';
             $sentencia = $conexion->prepare($consultaSQL);
             $sentencia->execute();
 
