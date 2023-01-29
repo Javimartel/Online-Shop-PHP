@@ -116,6 +116,8 @@
 				try {
 					$dsn = 'mysql:host='.$config['db']['host'].';dbname='.$config['db']['name'];
 					$conexion = new PDO($dsn, $config['db']['user'], $config['db']['pass'], $config['db']['options']);
+
+					// Seleccionamos los productos para que se muestren en pantalla
 					$consultaSQL = "SELECT id_product, name, price, description, image FROM productos";
 					$sentencia = $conexion->prepare($consultaSQL);
 					$sentencia->execute();
@@ -134,6 +136,7 @@
 								<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
 									<div class="modal-content">';
 
+						// Si eres admin, se mostrará el modal que actualiza los productos
 						if (isset($_SESSION["user"]) && $_SESSION["user"]["admin"]) {
 
 							echo '<div class="modal-header">
@@ -165,7 +168,7 @@
 								<button type="submit" class="btn btn-danger m-2" name="delete-product" data-bs-dismiss="modal">Eliminar</button>';
 
 						} else {
-
+							// Se muestra el modal de añadir productos al carrito
 							echo '<div class="modal-header">
 								<h5 class="modal-title" id="modal-producto-'.$data[0].'1">Añadir producto</h5>
 								<button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close" style="background-color: black !important">X</button>
@@ -174,6 +177,7 @@
 							<form id="form-producto-'.$data[0].'" action="#" method="post">
 							<div class="form-group mb-2 d-flex flex-column align-items-center">';
 							if (!isset($_SESSION["user"])) {
+								// Si no estas registrado, se muestra este mensaje
 								echo '<div class="alert alert-danger" role="alert" style="text-align-last: center">
 									Tienes que <a href="./login-register.php" class="alert-link"><u>INICIAR SESIÓN</u></a> para poder añadir productos al carrito
 								</div>';
@@ -184,6 +188,7 @@
 													<input type="hidden" name="id-product" value="'.$data[0].'">
 												</div>';
 							if (isset($_SESSION["user"])) {
+								// Si estas registrado el botón sale activado para permitirte añadir al carrito
 								echo '<div class="form-group d-flex justify-content-center"><button type="submit" class="btn btn-primary m-2" name="add-product" data-bs-dismiss="modal">Añadir al carrito</button>';
 							} else {
 								echo '<div class="form-group d-flex justify-content-center"><button type="submit" class="btn btn-primary m-2" data-bs-dismiss="modal" disabled>Añadir al carrito</button>';
@@ -198,6 +203,7 @@
 							</div>';
 					}
 					
+					// Si eres admin se abre este modal para insertar productos nuevos
 					if (isset($_SESSION["user"]) && $_SESSION["user"]["admin"]) {
 						echo '<div class="product-item col-md-3 pb-4">
 							<a href="#" data-bs-toggle="modal" data-bs-target="#modal-insertar">

@@ -9,6 +9,8 @@
             "description" => trim(strip_tags($_POST["insert-description"])),
             "image" => "../images/new-img/".trim(strip_tags($_POST["insert-image"]))
         ];
+
+        // Se inserta el producto nuevo
         $consultaSQL = "INSERT INTO productos (name, price, description, image)";
         $consultaSQL .= "VALUES (:" . implode(", :", array_keys($producto)) . ")";
         $sentencia = $conexion->prepare($consultaSQL);

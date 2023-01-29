@@ -11,6 +11,7 @@
             $image = "../images/new-img/".trim(strip_tags($_POST["update-image"]));
         }
 
+        // Actualizamos el producto con los datos proporcionados
         $consultaSQL = 'UPDATE productos
                         SET name = "'.trim(strip_tags($_POST["update-name"])).'", price = "'.trim(strip_tags($_POST["update-price"])).'", description = "'.trim(strip_tags($_POST["update-description"])).'", image = "'.$image.'"
                         WHERE id_product = "'.trim(strip_tags($_POST["id-product"])).'"';

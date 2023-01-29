@@ -1,4 +1,5 @@
 <?php
+    // Plantilla del offcanvas para el carrito
     echo '<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
     <div class="offcanvas-header d-flex align-items-start">
         <h5 id="offcanvasRightLabel">Productos del Carrito</h5>
