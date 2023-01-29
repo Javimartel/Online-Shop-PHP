@@ -18,8 +18,12 @@
 	}
 
 	if (isset($_POST["update-product"])) {
-		// Admin actualiza un producto
-		include "../controllers/updateProduct.php";
+		// Si se quita el min="0" del input=number, se comprueba aquí igualmente
+		if ($_POST["update-price"] < 0) {}
+		else {
+			// Admin actualiza un producto
+			include "../controllers/updateProduct.php";
+		}
 	}
 ?>
 
