@@ -13,12 +13,14 @@
             'mensaje' => 'El usuario ' . $_POST["register-nick"] . ' ya existe'
         ];
 
+        // Si no se envía algun campo, mostramos error
         if ($_POST["register-nick"] == "" || $_POST["register-password"] == "" || $_POST["register-email"] == "" || $_POST["register-phone"] == "") {
             $resultado['error'] = true;
             $resultado["mensaje"] = "Ha introducido mal algún campo";
             goto end;
         }
 
+        // Si las contraseñas no coinciden, mostramos error
         if ($_POST["register-password"] != $_POST["register-confirm-pw"]) {
             $resultado['error'] = true;
             $resultado["mensaje"] = "Ha introducido mal las contraseñas";
@@ -29,11 +31,13 @@
         try {
             $dsn = 'mysql:host='.$config['db']['host'].';dbname='.$config['db']['name'];
             $conexion = new PDO($dsn, $config['db']['user'], $config['db']['pass'], $config['db']['options']);
+            // Seleccionamos todos los nicks de los usuarios
             $consultaSQL = "SELECT nick FROM usuarios";
             $sentencia = $conexion->prepare($consultaSQL);
             $sentencia->execute();
             $usuarios = $sentencia->fetchAll();
             
+            // Comprobamos que no existe ese nick, si existe mostramos error
             foreach ($usuarios as $nicks) {
                 if ($_POST["register-nick"] === $nicks[0]) {
                     $resultado['error'] = true;
@@ -47,10 +51,13 @@
                 "email" => trim(strip_tags($_POST["register-email"])),
                 "phone" => trim(strip_tags($_POST["register-phone"]))
             ];
+
+            // Insertamos usuario nuevo
             $consultaSQL = "INSERT INTO usuarios (nick, password, email, phone)";
             $consultaSQL .= "VALUES (:" . implode(", :", array_keys($usuario)) . ")";
             $sentencia = $conexion->prepare($consultaSQL);
             $sentencia->execute($usuario);
+            // Iniciamos la sesión con el usuario registrado
             $_SESSION["user"]["nick"] = $usuario["nick"];
             $_SESSION["user"]["password"] = $usuario["password"];
             $_SESSION["user"]["email"] = $usuario["email"];
@@ -75,7 +82,8 @@
     // Muestra el error y vuelve al html
     goto html;
     } else {
-?>
+?>  
+        <!-- Si no ha habido error, este script te envía a "../index.php" -->
 		<script type="text/javascript">
 			window.location.href = "../index.php";
 		</script>
@@ -100,14 +108,18 @@
         try {
             $dsn = 'mysql:host='.$config['db']['host'].';dbname='.$config['db']['name'];
             $conexion = new PDO($dsn, $config['db']['user'], $config['db']['pass'], $config['db']['options']);
+            // Seleccionamos la lista de los usuarios registrados
             $consultaSQL = "SELECT nick, password, email, phone, admin FROM usuarios";
             $sentencia = $conexion->prepare($consultaSQL);
             $sentencia->execute();
             $usuarios = $sentencia->fetchAll();
             
             foreach ($usuarios as $data) {
-                if ($_POST["login-nick"] === $data[0]) {
-                    if ($_POST["login-password"] === $data[1]) {
+                // Comprobamos que el usuario es el mismo
+                if (trim(strip_tags($_POST["login-nick"])) === $data[0]) {
+                    // Comprobamos que la contraseña es la misma
+                    if (trim(strip_tags($_POST["login-password"])) === $data[1]) {
+                        // Si todo es correcto, iniciamos la sesión con el usuario registrado
                         $_SESSION["user"]["nick"] = $_POST["login-nick"];
                         $_SESSION["user"]["password"] = $_POST["login-password"];
                         $_SESSION["user"]["email"] = $data[2];
@@ -119,7 +131,7 @@
                         goto end;
                     }
                 ?>
-
+                    <!-- Si todo es correcto este script te manda a "../index.php" -->
                     <script type="text/javascript">
                         window.location.href = "../index.php";
                     </script>
