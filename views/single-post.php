@@ -8,7 +8,7 @@
 
 				<div class="navbar-brand">
 					<a href="../index.php">
-						<img src="../../images/img-template/img-template/main-logo.png" alt="logo">
+						<img src="../../images/img-template/main-logo.png" alt="logo">
 					</a>
 				</div>
 
