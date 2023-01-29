@@ -1,4 +1,13 @@
-<?php include "./views/parts/header.php";?>
+<?php
+
+/**
+ * @author Javier Martel Espino
+ * @version 1.0
+ * @package General
+ * @github https://github.com/Javimartel
+*/
+
+include "./views/parts/header.php";?>
 
 <div class="site-banner">
 	<div class="banner-content">
