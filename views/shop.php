@@ -4,6 +4,8 @@
 	if (isset($_POST["insert"])) {
 		// Si no se envían todos los campos, no se inserta nada
 		if ($_POST["insert-name"] == "" || $_POST["insert-price"] == "" || $_POST["insert-description"] == "" || $_POST["insert-image"] == "") {} 
+		// Si se quita el min="0" del input=number, se comprueba aquí igualmente
+		else if ($_POST["insert-price"] < 0) {}
 		else {
 			// Admin inserta un producto nuevo
 			include "../controllers/insertProduct.php";
