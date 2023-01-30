@@ -84,7 +84,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4 mb-5">
-				<a href="single-post.html">
+				<a href="./single-post.php">
 					<img src="../images/img-template/blog-cake.jpg" alt="blog" class="postImg mb-3">
 				</a>
 				<div class="content">
@@ -94,18 +94,18 @@
 						<span><i class="icon icon-envelope-o mr-2"></i>News</span>
 					</div>
 
-					<h2 class="post-title"><a href="single-post.html">How to Make a Cake with Great Delicious Chocolate</a></h2>
+					<h2 class="post-title"><a href="./single-post.php">How to Make a Cake with Great Delicious Chocolate</a></h2>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eisusmod tempor incidunt ut elit et.</p>
 
 					<div class="pix_btn">
-						<a href="single-post.html" class="btn-hvr-effects mt-3">read more</a>
+						<a href="./single-post.php" class="btn-hvr-effects mt-3">read more</a>
 					</div>
 
 				</div>
 			</div>
 
 			<div class="col-md-4 mb-5">
-				<a href="single-post.html">
+				<a href="./single-post.php">
 					<img src="../images/img-template/postImg2.jpg" alt="blog" class="postImg mb-3">
 				</a>
 				<div class="content">
@@ -115,18 +115,18 @@
 						<span><i class="icon icon-envelope-o mr-2"></i>News</span>
 					</div>
 
-					<h2 class="post-title"><a href="single-post.html">How to Make a Cake with Great Delicious Chocolate</a></h2>
+					<h2 class="post-title"><a href="./single-post.php">How to Make a Cake with Great Delicious Chocolate</a></h2>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eisusmod tempor incidunt ut elit et.</p>
 
 					<div class="pix_btn">
-						<a href="single-post.html" class="btn-hvr-effects mt-3">read more</a>
+						<a href="./single-post.php" class="btn-hvr-effects mt-3">read more</a>
 					</div>
 				
 				</div>
 			</div>
 
 			<div class="col-md-4 mb-5">
-				<a href="single-post.html">
+				<a href="./single-post.php">
 					<img src="../images/img-template/postitem1.jpg" alt="blog" class="postImg mb-3">
 				</a>
 				<div class="content">
@@ -136,18 +136,18 @@
 						<span><i class="icon icon-envelope-o mr-2"></i>News</span>
 					</div>
 
-					<h2 class="post-title"><a href="single-post.html">How to Make a Cake with Great Delicious Chocolate</a></h2>
+					<h2 class="post-title"><a href="./single-post.php">How to Make a Cake with Great Delicious Chocolate</a></h2>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eisusmod tempor incidunt ut elit et.</p>
 
 					<div class="pix_btn">
-						<a href="single-post.html" class="btn-hvr-effects mt-3">read more</a>
+						<a href="./single-post.php" class="btn-hvr-effects mt-3">read more</a>
 					</div>
 				
 				</div>
 			</div>
 
 			<div class="col-md-4 mb-5">
-				<a href="single-post.html">
+				<a href="./single-post.php">
 					<img src="../images/img-template/tabimg.jpg" alt="blog" class="postImg mb-3">
 				</a>
 				<div class="content">
@@ -157,18 +157,18 @@
 						<span><i class="icon icon-envelope-o mr-2"></i>News</span>
 					</div>
 
-					<h2 class="post-title"><a href="single-post.html">How to Make a Cake with Great Delicious Chocolate</a></h2>
+					<h2 class="post-title"><a href="./single-post.php">How to Make a Cake with Great Delicious Chocolate</a></h2>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eisusmod tempor incidunt ut elit et.</p>
 
 					<div class="pix_btn">
-						<a href="single-post.html" class="btn-hvr-effects mt-3">read more</a>
+						<a href="./single-post.php" class="btn-hvr-effects mt-3">read more</a>
 					</div>
 				
 				</div>
 			</div>
 
 			<div class="col-md-4 mb-5">
-				<a href="single-post.html">
+				<a href="./single-post.php">
 					<img src="../images/img-template/postitem.jpg" alt="blog" class="postImg mb-3">
 				</a>
 				<div class="content">
@@ -178,18 +178,18 @@
 						<span><i class="icon icon-envelope-o mr-2"></i>News</span>
 					</div>
 
-					<h2 class="post-title"><a href="single-post.html">How to Make a Cake with Great Delicious Chocolate</a></h2>
+					<h2 class="post-title"><a href="./single-post.php">How to Make a Cake with Great Delicious Chocolate</a></h2>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eisusmod tempor incidunt ut elit et.</p>
 
 					<div class="pix_btn">
-						<a href="single-post.html" class="btn-hvr-effects mt-3">read more</a>
+						<a href="./single-post.php" class="btn-hvr-effects mt-3">read more</a>
 					</div>
 				
 				</div>
 			</div>
 
 			<div class="col-md-4 mb-5">
-				<a href="single-post.html">
+				<a href="./single-post.php">
 					<img src="../images/img-template/postimg2.jpg" alt="blog" class="postImg mb-3">
 				</a>
 				<div class="content">
@@ -199,11 +199,11 @@
 						<span><i class="icon icon-envelope-o mr-2"></i>News</span>
 					</div>
 
-					<h2 class="post-title"><a href="single-post.html">How to Make a Cake with Delicious Chocolate</a></h2>
+					<h2 class="post-title"><a href="./single-post.php">How to Make a Cake with Delicious Chocolate</a></h2>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eisusmod tempor incidunt ut elit et.</p>
 
 					<div class="pix_btn">
-						<a href="single-post.html" class="btn-hvr-effects mt-3">read more</a>
+						<a href="./single-post.php" class="btn-hvr-effects mt-3">read more</a>
 					</div>
 				
 				</div>
