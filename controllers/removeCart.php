@@ -1,7 +1,7 @@
 <?php
     /**
      * Controlador para eliminar un producto del carrito
-     * @package General
+     * @package User
      * @version 1.0
     */
 

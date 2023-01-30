@@ -1,7 +1,7 @@
 <?php
     /**
      * Controlador para actualizar un producto de la base de datos
-     * @package General
+     * @package Admin
      * @version 1.0
     */
 

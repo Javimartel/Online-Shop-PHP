@@ -1,7 +1,7 @@
 <?php
     /**
      * Controlador para insertar un producto en la base de datos
-     * @package General
+     * @package Admin
      * @version 1.0
     */
 

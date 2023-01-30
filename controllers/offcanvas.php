@@ -1,7 +1,7 @@
 <?php
     /**
      * Controlador para mostrar el offcanvas del carrito
-     * @package General
+     * @package User
      * @version 1.0
     */
 

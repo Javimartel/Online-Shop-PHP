@@ -1,7 +1,7 @@
 <?php
     /**
      * Controlador para añadir un producto al carrito
-     * @package General
+     * @package User
      * @version 1.0
     */
     

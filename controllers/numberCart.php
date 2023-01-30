@@ -1,7 +1,7 @@
 <?php
     /**
      * Controlador para mostrar el número de elementos en el carrito
-     * @package General
+     * @package User
      * @version 1.0
     */
 
