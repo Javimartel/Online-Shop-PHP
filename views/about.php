@@ -43,7 +43,7 @@
 							</form>
 						</div>
 					<div class="mr-3">|</div>
-					<div class="shopping-cart">
+					<div class="shopping-cart mr-4">
 						<a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
 							<i class="icon icon-shopping-cart"></i>
 						</a>
