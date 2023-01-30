@@ -23,7 +23,7 @@
 						<li class="nav-item text-hover"><a href="./about.php" class="nav-link" data-effect="About Us">Sobre nosotros</a></li>
 						<li class="nav-item text-hover"><a href="./contact.php" class="nav-link" data-effect="Contact">Contáctanos</a></li>
 
-						<li class="nav-item dropdown">
+						<li class="nav-item dropdown active">
 							<a href="#" data-bs-toggle="dropdown" aria-expanded="false" class="nav-link dropdown-toggle">Páginas</a>
 							<ul class="dropdown-menu">
 								<li><a href="./blog.php" class="dropdown-item">Blog</a></li>
@@ -33,17 +33,16 @@
 						</li>
 
 					</ul>
-				</div>
-
-				<div class="action-menu">
-					<div class="searchbar">
-						<a href="#" class="search-button search-toggle" data-selector=".navbar">
-							<i class="icon icon-search"></i>
-						</a>
-						<form role="search" method="get" class="search-box" action="">
-							<input class="search-field text search-input" placeholder="Search" type="search">
-						</form>
-					</div>
+					<div class="d-flex justify-content-end align-items-center">
+						<div class="searchbar">
+							<a href="#" class="search-button search-toggle" data-selector=".navbar">
+								<i class="icon icon-search"></i>
+							</a>
+							<form role="search" method="get" class="search-box" action="">
+								<input class="search-field text search-input text-dark" placeholder="Buscar" type="search">
+							</form>
+						</div>
+					<div class="mr-3">|</div>
 					<div class="shopping-cart">
 						<a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
 							<i class="icon icon-shopping-cart"></i>
@@ -53,10 +52,7 @@
 						}
 						?>
 					</div>
-				</div>
-
-			</nav>
-
+				</nav>
 			</div>		
 		</div>
 

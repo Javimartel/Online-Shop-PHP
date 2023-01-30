@@ -115,17 +115,16 @@
 						</li>
 
 					</ul>
-				</div>
-
-					<div class="action-menu">
+					<div class="d-flex justify-content-end align-items-center">
 						<div class="searchbar">
 							<a href="#" class="search-button search-toggle" data-selector=".navbar">
 								<i class="icon icon-search"></i>
 							</a>
 							<form role="search" method="get" class="search-box" action="">
-								<input class="search-field text search-input" placeholder="Buscar" type="search">
+								<input class="search-field text search-input text-dark" placeholder="Buscar" type="search">
 							</form>
 						</div>
+					<div class="mr-3">|</div>
 					<div class="shopping-cart">
 						<a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
 							<i class="icon icon-shopping-cart"></i>
@@ -135,10 +134,7 @@
 						}
 						?>
 					</div>
-					</div>
-
 				</nav>
-
 			</div>		
 		</div>
 

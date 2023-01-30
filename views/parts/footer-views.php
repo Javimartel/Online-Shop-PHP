@@ -73,6 +73,23 @@
 
     </div>    	
 
+    <!-- Script para abrir el navbar -->
+    <script>
+        let button = document.querySelector(".navbar-toggler");
+        let navbar = document.querySelector(".navbar-collapse");
+        let action_menu = document.querySelector(".action-menu");
+        button.addEventListener("click", function() {
+            console.log("click")
+            if (navbar.classList.contains("show")) {
+                navbar.classList.remove("show");
+                action_menu.classList.remove("show");
+            } else {
+                navbar.classList.add("show");
+                action_menu.classList.add("show");
+            }
+        });
+    </script>
+
     <script src="../js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="../js/slick.min.js"></script>
