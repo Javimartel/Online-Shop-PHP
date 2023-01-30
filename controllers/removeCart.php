@@ -1,4 +1,10 @@
 <?php
+    /**
+     * Controlador para eliminar un producto del carrito
+     * @package General
+     * @version 1.0
+    */
+
     if (isset($_POST["remove-carrito"])) {
         if ($index) {
             $config = include "./config/config.php";

@@ -1,4 +1,10 @@
 <?php
+    /**
+     * Controlador para mostrar los productos del carrito
+     * @package General
+     * @version 1.0
+    */
+
     if ($index) {
         $config = include "./config/config.php";
     } else{

@@ -1,4 +1,10 @@
 <?php
+    /**
+     * Controlador para mostrar el offcanvas del carrito
+     * @package General
+     * @version 1.0
+    */
+
     // Plantilla del offcanvas para el carrito
     echo '<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
     <div class="offcanvas-header d-flex align-items-start">

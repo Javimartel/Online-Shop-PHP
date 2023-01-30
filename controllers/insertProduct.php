@@ -1,4 +1,10 @@
 <?php
+    /**
+     * Controlador para insertar un producto en la base de datos
+     * @package General
+     * @version 1.0
+    */
+
     $config = include "../config/config.php";
     try {
         $dsn = 'mysql:host='.$config['db']['host'].';dbname='.$config['db']['name'];
