@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Online Shop PHP<span id="projectnumber">&#160;1</span>
+   <div id="projectname">Online Shop PHP<span id="projectnumber">&#160;1.0</span>
    </div>
    <div id="projectbrief">Tienda online con carrito funcional</div>
   </td>
@@ -116,7 +116,7 @@ $(document).ready(function(){initNavTree('d3/dcc/md__r_e_a_d_m_e.html','../../')
 </ul>
 <h2><a class="anchor" id="autotoc_md1"></a>
 Introducción</h2>
-<p>Este proyecto consiste en una aplicación de venta de dulces online.</p>
+<p>Este proyecto consiste en una aplicación de venta de dulces online con un carrito funcional.</p>
 <p>En la web puedes:</p>
 <ul>
 <li>Entrar como invitado, pero sin poder realizar ningún pedido.</li>
@@ -127,9 +127,10 @@ Introducción</h2>
 Requerimientos</h2>
 <ul>
 <li>PHP 7.0 o superior</li>
-<li>MariaDB 10.0 o superior</li>
-<li><a href="https://www.apachefriends.org/es/index.html">XAMPP</a> 8.0 o superior</li>
+<li>MySQL</li>
+<li>Composer 2.5.1</li>
 </ul>
+<p>Tener un gestor como <a href="https://www.apachefriends.org/es/index.html">XAMPP</a> para mantener la base de datos activa localmente.</p>
 <h2><a class="anchor" id="autotoc_md3"></a>
 Instalación</h2>
 <ol type="1">
@@ -139,12 +140,28 @@ Instalación</h2>
 <div class="line">git clone https://github.com/Javimartel/Online-Shop-PHP.git</div>
 </div><!-- fragment --> <hr  />
 <ol type="1">
-<li>Vaya a XAMPP y active el servicio de MySQL:</li>
+<li>La aplicación utiliza variables de entorno por lo que para utilizar la base de datos hay que crear un fichero llamado ".env" en el directo raíz de la siguiente manera:</li>
+</ol>
+<div class="fragment"><div class="line"> {shell=}</div>
+<div class="line">DB_HOST=&#39;&#39;</div>
+<div class="line">DB_USER=&#39;&#39;</div>
+<div class="line">DB_PASS=&#39;&#39;</div>
+<div class="line">DB_NAME=&#39;tienda&#39;</div>
+</div><!-- fragment --><p>Rellenando los campos vacíos con los datos que vaya a utilizar localmente.</p>
+<hr  />
+<ol type="1">
+<li>Lo siguiente será instalar las dependencias necesarias para el funcionamiento de la aplicación utilizando "*composer*" con este comando:</li>
+</ol>
+<div class="fragment"><div class="line"> {shell=}</div>
+<div class="line">composer install</div>
+</div><!-- fragment --><hr  />
+<ol type="1">
+<li>Ahora tiene que ir a XAMPP y activar el servicio de MySQL:</li>
 </ol>
 <p><img src="https://i.imgur.com/G3VXUI3.png" alt="" class="inline"/></p>
 <hr  />
 <ol type="1">
-<li>Debe iniciar el servidor en el archivo *"installer.php"* para que se instale la base de datos con sus respectivos datos; esta es la ruta: <div class="fragment"><div class="line"> {shell=}</div>
+<li>Debe iniciar el servidor de PHP en el archivo *"installer.php"* para que se instale la base de datos con sus respectivos datos; esta es la ruta: <div class="fragment"><div class="line"> {shell=}</div>
 <div class="line">./config/installer.php</div>
 </div><!-- fragment --> Debería aparecer este mensaje:</li>
 </ol>
@@ -159,31 +176,31 @@ Instalación</h2>
 <div class="line">localhost:3000/index.php</div>
 </div><!-- fragment --> <hr  />
 <p> Listo, ya puede disfrutar de la aplicación.</p>
-<h2><a class="anchor" id="autotoc_md8"></a>
+<h2><a class="anchor" id="autotoc_md10"></a>
 Diseño y Funcionalidades</h2>
-<h3><a class="anchor" id="autotoc_md9"></a>
+<h3><a class="anchor" id="autotoc_md11"></a>
 Página principal</h3>
 <p>La página principal no tiene funcionalidad, simplemente es para iniciar la aplicación:</p>
 <div class="fragment"><div class="line"> {shell=}</div>
 <div class="line">./index.php</div>
 </div><!-- fragment --><p><img src="https://i.imgur.com/IH4sWre.jpg" alt="" class="inline"/></p>
-<h3><a class="anchor" id="autotoc_md10"></a>
+<h3><a class="anchor" id="autotoc_md12"></a>
 Tienda</h3>
 <p>Esta es la página con la mayoría de funcionalidades.</p>
 <div class="fragment"><div class="line"> {shell=}</div>
 <div class="line">./views/shop.php</div>
 </div><!-- fragment --><p>Aquí se almacenan los productos que tenemos en la base de datos:</p>
 <p><img src="https://i.imgur.com/oWYvgH5.png" alt="" class="inline"/></p>
-<h4><a class="anchor" id="autotoc_md11"></a>
+<h4><a class="anchor" id="autotoc_md13"></a>
 Usuario Invitado</h4>
 <p>Cuando no hay ningún usuario registrado, si intenta realizar un pedido pulsando en algún producto le aparecerá este modal:</p>
 <p><img src="https://i.imgur.com/fjgFBFG.png" alt="" class="inline"/></p>
-<h4><a class="anchor" id="autotoc_md12"></a>
+<h4><a class="anchor" id="autotoc_md14"></a>
 Usuario Registrado</h4>
 <p>Si el usuario ya tiene una cuenta, aparecerá de la siguiente manera a la hora de realizar un pedido:</p>
 <p><img src="https://i.imgur.com/MGDTI6V.png" alt="" class="inline"/></p>
 <p>Como vemos el botón ahora está habilitado y se puede realizar el pedido.</p>
-<h4><a class="anchor" id="autotoc_md13"></a>
+<h4><a class="anchor" id="autotoc_md15"></a>
 Usuario Administrador</h4>
 <p>Si el usuario es administrador, le aparecerá un botón adicional que sirve para añadir nuevos productos a la tienda:</p>
 <p><img src="https://i.imgur.com/vX23Aup.png" alt="" class="inline"/></p>
@@ -191,7 +208,7 @@ Usuario Administrador</h4>
 <p><img src="https://i.imgur.com/y4hl0nG.png" alt="" class="inline"/></p>
 <p>Los usuarios administradores tienen un modal diferente a la hora de pulsar en un producto, no aparece la opción de añadir al carrito sino que tienen la opción de modificar los datos del producto o de eliminarlos:</p>
 <p><img src="https://i.imgur.com/KUd3bbN.png" alt="" class="inline"/></p>
-<h3><a class="anchor" id="autotoc_md14"></a>
+<h3><a class="anchor" id="autotoc_md16"></a>
 Register-Login</h3>
 <p>En esta página tenemos la opción tanto de registrarnos como de iniciar sesión:</p>
 <div class="fragment"><div class="line"> {shell=}</div>
@@ -208,7 +225,7 @@ Register-Login</h3>
 <p><img src="https://i.imgur.com/KZQ8UKG.png" alt="" class="inline"/></p>
 <p>Si todo se ha completado correctamente, volveremos al índice y aparecerá nuestro usuario con el correo en la parte superior izquierda y además veremos un número en el carrito a la derecha:</p>
 <p><img src="https://i.imgur.com/sMzPuSZ.png" alt="" class="inline"/></p>
-<h3><a class="anchor" id="autotoc_md15"></a>
+<h3><a class="anchor" id="autotoc_md17"></a>
 Carrito</h3>
 <p>Vamos a la Tienda y al añadir un producto vemos como cambia el carrito:</p>
 <p><img src="https://i.imgur.com/1jGGgXc.png" alt="" class="inline"/></p>
@@ -217,7 +234,7 @@ Carrito</h3>
 <p>Si añadimos muchos productos, aparecerá un <em>scrollbar</em> que nos permitirá ver toda la lista:</p>
 <p><img src="https://i.imgur.com/tRbW8xx.png" alt="" class="inline"/></p>
 <p>También está la opción de abrir el carrito desde cualquier página y no solo desde la Tienda, pudiendo eliminar productos en cualquier momento.</p>
-<h3><a class="anchor" id="autotoc_md16"></a>
+<h3><a class="anchor" id="autotoc_md18"></a>
 Resto de páginas</h3>
 <p>El resto de páginas no tienen funcionalidad y están en inglés ya que vienen incluidas en el Template de Bootstrap que he descargado gracias a <a href="https://mokshastudio.com">MokshaDesignStudio</a>; toda la información sobre ellos está en el inicio del archivo *"style.css"*:</p>
 <div class="fragment"><div class="line"> {shell=}</div>

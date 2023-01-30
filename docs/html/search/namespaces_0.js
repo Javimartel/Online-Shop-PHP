@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['general_0',['General',['../d7/de3/namespace_general.html',1,'']]]
+  ['admin_0',['Admin',['../d1/d7a/namespace_admin.html',1,'']]]
 ];
