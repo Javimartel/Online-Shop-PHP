@@ -70,7 +70,7 @@
 					<div class="text-content colored">
 						<h1>Contact Us</h1>
 						<div class="breadcum-items">
-							<span class="item color-primary"><a href="#">Home /</a></span>
+							<span class="item color-primary"><a href="../index.php">Home /</a></span>
 							<span class="item colored">Contact Us</span>
 						</div>
 					</div>

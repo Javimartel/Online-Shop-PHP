@@ -17,7 +17,7 @@ include "./views/parts/header.php";?>
 					<div class="colored">
 						<h1>Inicio</h1>
 						<div class="breadcum-items">
-							<span class="item"><a href="../index.html">Home</a></span>
+							<span class="item"><a href="../index.php">Home</a></span>
 						</div>
 					</div>
 				</div>

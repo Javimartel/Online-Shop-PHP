@@ -70,7 +70,7 @@
 					<div class="text-content colored">
 						<h1>Blogs</h1>
 						<div class="breadcum-items mt-2">
-							<span class="item color-primary"><a href="index.html">Home /</a></span>
+							<span class="item color-primary"><a href="../index.php">Home /</a></span>
 							<span class="item colored">Blogs</span>
 						</div>
 					</div>

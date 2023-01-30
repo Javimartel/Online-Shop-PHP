@@ -70,7 +70,7 @@
 					<div class="colored">
 						<h1>Shop</h1>
 						<div class="breadcum-items">
-							<span class="item"><a href="index.html">Home /</a></span>
+							<span class="item"><a href="../index.php">Home /</a></span>
 							<span class="item colored">Shop</span>
 						</div>
 					</div>

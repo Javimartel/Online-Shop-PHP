@@ -72,8 +72,8 @@
 						<h2>How to Make a Cake with Great Delicious Chocolate</h2>
 						
 						<div class="breadcum-items mt-2">
-							<span class="item color-primary"><a href="index.html">Home /</a></span>
-							<span class="item color-primary"><a href="index.html">Blogs /</a></span>
+							<span class="item color-primary"><a href="../index.php">Home /</a></span>
+							<span class="item color-primary"><a href="../index.php">Blogs /</a></span>
 							<span class="item colored">How to Make a Cake with Great Delicious Chocolate</span>
 						</div>
 					</div>
