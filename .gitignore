@@ -1,6 +1,3 @@
 # Ignora archivos locales
 .env
 vendor
-test.html
-test.php
-queries.sql
