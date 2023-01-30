@@ -79,7 +79,6 @@
         let navbar = document.querySelector(".navbar-collapse");
         let action_menu = document.querySelector(".action-menu");
         button.addEventListener("click", function() {
-            console.log("click")
             if (navbar.classList.contains("show")) {
                 navbar.classList.remove("show");
                 action_menu.classList.remove("show");
