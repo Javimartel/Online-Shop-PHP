@@ -6370,7 +6370,7 @@ a.nav-link {
 .navbar-nav .nav-item.active a.nav-link {
   color: #ce3c83;
 }
-@media screen and (max-width: 575px){
+/* @media screen and (max-width: 575px){
   .navbar #slide-navbar-collapse {
       z-index: 9999;
       position: absolute;
@@ -6380,7 +6380,7 @@ a.nav-link {
       width: 100%;
       margin-top: 109px;
   }
-}
+} */
 
 /* -- Homepage Banner Section
 --------------------------------------------------------------*/
