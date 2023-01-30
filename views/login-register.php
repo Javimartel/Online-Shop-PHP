@@ -85,8 +85,12 @@
     // Muestra el error y vuelve al html
     goto html;
     } else {
-        // Si todo es correcto te redirige a "../index.php"
-        header("Location: ../index.php");
+?>  
+    <!-- Si no ha habido error, este script te envía a "../index.php" -->
+    <script type="text/javascript">
+        window.location.href = "../index.php";
+    </script>
+<?php
 	}
         } catch (PDOException $error) {
             $resultado['error'] = true;
@@ -129,8 +133,12 @@
                         $resultado['mensaje'] = "La contraseña para " . $_POST["login-nick"] . " es incorrecta";
                         goto end;
                     }
-                    // Si todo es correcto te redirige a "../index.php"
-                    header("Location: ../index.php");
+?>  
+    <!-- Si no ha habido error, este script te envía a "../index.php" -->
+    <script type="text/javascript">
+        window.location.href = "../index.php";
+    </script>
+<?php
                 }
             }
 
