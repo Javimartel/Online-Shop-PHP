@@ -1,4 +1,5 @@
-# Ignora el archivo test
+# Ignora archivos locales
+.env
 test.html
 test.php
 queries.sql
