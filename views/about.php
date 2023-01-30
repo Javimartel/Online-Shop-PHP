@@ -23,7 +23,7 @@
 						<li class="nav-item text-hover active"><a href="./about.php" class="nav-link" data-effect="About Us">Sobre nosotros</a></li>
 						<li class="nav-item text-hover"><a href="./contact.php" class="nav-link" data-effect="Contact">Contáctanos</a></li>
 
-						<li class="nav-item dropdown active">
+						<li class="nav-item dropdown">
 							<a href="#" data-bs-toggle="dropdown" aria-expanded="false" class="nav-link dropdown-toggle">Páginas</a>
 							<ul class="dropdown-menu">
 								<li><a href="./blog.php" class="dropdown-item">Blog</a></li>

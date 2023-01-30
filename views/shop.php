@@ -120,7 +120,7 @@
 					$productos = $sentencia->fetchAll();
 					
 					foreach ($productos as $data) {
-						echo "<div class='product-item col-md-3 pb-4'>
+						echo "<div class='product-item col-md-3 pb-4 d-flex flex-column align-items-center'>
 								<a href='#' data-bs-toggle='modal' data-bs-target='#modal-producto-".$data[0]."' class='product-image'><img style='width:265px;height:303.8px;object-fit:cover;' src='".$data[4]."'></a>
 								<div class='text-comtent text-center'>
 									<h5 class='pt-4'><a href='#'>".$data[1]."</a></h5>
@@ -201,7 +201,7 @@
 					
 					// Si eres admin se abre este modal para insertar productos nuevos
 					if (isset($_SESSION["user"]) && $_SESSION["user"]["admin"]) {
-						echo '<div class="product-item col-md-3 pb-4">
+						echo '<div class="product-item col-md-3 pb-4 d-flex flex-column align-items-center">
 							<a href="#" data-bs-toggle="modal" data-bs-target="#modal-insertar">
 							<div class="d-flex flex-column justify-content-center align-items-center" style="width:265px;height:303.8px;">
 							<svg class="d-flex align-center" xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
